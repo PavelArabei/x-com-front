@@ -1,0 +1,29 @@
+@import 'colors';
+
+.sidenav-container {
+    height: 100%;
+}
+
+.sidenav {
+    width: 200px;
+}
+
+.sidenav .mat-toolbar {
+    background: inherit;
+}
+
+.mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.content {
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    flex-grow: 1;
+}

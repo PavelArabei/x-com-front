@@ -5,8 +5,8 @@
 $dark-theme: mat.define-dark-theme(
     (
         color: (
-            primary: mat.define-palette(mat.$pink-palette),
-            accent: mat.define-palette(mat.$blue-grey-palette),
+            primary: mat.define-palette(mat.$teal-palette),
+            accent: mat.define-palette(mat.$pink-palette),
             warn: mat.define-palette(mat.$red-palette),
         ),
         typography: mat.define-typography-config(),
@@ -16,7 +16,7 @@ $dark-theme: mat.define-dark-theme(
 @include mat.all-component-themes($dark-theme);
 $font-family: mat.get-theme-typography($dark-theme, body-1, 'font-family');
 $primary: mat.get-theme-color($dark-theme, primary, default);
-$accent: mat.get-theme-color($dark-theme, accent, A100);
+$accent: mat.get-theme-color($dark-theme, accent, A400);
 $warn: mat.get-theme-color($dark-theme, warn, 700);
 $text: mat.get-theme-color($dark-theme, foreground, text);
 $background: mat.get-theme-color($dark-theme, background, card);

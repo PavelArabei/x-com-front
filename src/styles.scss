@@ -1,9 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@import 'scss/colors';
+@import 'colors';
 
 html,
 body {
-    min-height: 100dvh;
     box-sizing: border-box;
 }
 
@@ -11,4 +10,7 @@ body {
     margin: 0;
     background-color: $background;
     color: $text;
+}
+
+.container {
 }
