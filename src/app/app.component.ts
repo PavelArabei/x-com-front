@@ -1,7 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
-import { NavigationComponent } from './core/components/navigation/navigation.component';
+import { NavigationComponent } from '@core/components/navigation/navigation.component';
+import { IconRegisterService } from '@core/services/icon-register.service';
 
 @Component({
     selector: 'app-root',
@@ -10,6 +10,9 @@ import { NavigationComponent } from './core/components/navigation/navigation.com
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
 })
-export class AppComponent {
-    title = 'x-com-front';
+export class AppComponent implements OnInit {
+    iconRegisterService: IconRegisterService = inject(IconRegisterService);
+    ngOnInit() {
+        this.iconRegisterService.registerIcons();
+    }
 }

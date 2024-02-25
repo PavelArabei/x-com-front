@@ -1,0 +1,18 @@
+@import 'mixins';
+
+:host {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button {
+    transform: scale(2);
+}
+
+.icon {
+    @include icon-size(50px);
+}
+.main-search {
+    flex-grow: 1;
+}

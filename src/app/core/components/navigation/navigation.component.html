@@ -10,13 +10,12 @@
         <mat-nav-list> to do </mat-nav-list>
     </mat-sidenav>
     <mat-sidenav-content class="content container">
-        <mat-toolbar color="primary">
+        <mat-toolbar>
             <app-header [drawer]="drawer" [isHandset$]="isHandset$">
             </app-header>
         </mat-toolbar>
         <main class="main">
             <p>hello</p>
-
             <router-outlet />
         </main>
         <footer>asd</footer>
