@@ -1,0 +1,7 @@
+<div class="icon">
+    <mat-icon class="icon__svg" [svgIcon]="svgName"></mat-icon>
+    <p [class.textOnTop]="(isOnTop | async) === true" class="icon__text">
+        {{ svgText | titlecase }}
+    </p>
+</div>
+<!--@if (isOnTop | async) {-->

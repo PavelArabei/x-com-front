@@ -4,14 +4,13 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-}
-
-.button {
-    transform: scale(2);
+    align-items: start;
+    gap: 1rem;
+    margin-top: 3rem;
 }
 
 .icon {
-    @include icon-size(50px);
+    @include icon-size(48px);
 }
 .main-search {
     flex-grow: 1;

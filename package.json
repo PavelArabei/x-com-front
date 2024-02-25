@@ -10,6 +10,7 @@
         "test:coverage": "jest --coverage",
         "test:watch": "jest --watch",
         "lint": "ng lint",
+        "lint-fix": "ng lint --fix",
         "prettier": "npx prettier --write ."
     },
     "private": true,

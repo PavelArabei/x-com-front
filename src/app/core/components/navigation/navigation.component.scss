@@ -8,22 +8,27 @@
     width: 200px;
 }
 
-.sidenav .mat-toolbar {
+.sidenav {
     background: inherit;
 }
 
-.mat-toolbar.mat-primary {
-    position: sticky;
+.toolbar {
+    position: fixed;
     top: 0;
     z-index: 1;
+    height: auto;
+    transition: 0.3s linear;
 }
-
 .content {
     min-height: 100dvh;
     display: flex;
     flex-direction: column;
+    transition: 0.3s linear;
 }
 
 .main {
+    margin: 0 auto;
+    align-items: center;
     flex-grow: 1;
+    height: 6000px;
 }
