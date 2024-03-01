@@ -1,0 +1,8 @@
+<ul
+    class="menu-wrapper"
+    [ngStyle]="{
+        width: widthInNecessaryFormat
+    }"
+    [ngClass]="{ 'on-hover': isOnHover, 'right-direction': rightDirection }">
+    <ng-content></ng-content>
+</ul>

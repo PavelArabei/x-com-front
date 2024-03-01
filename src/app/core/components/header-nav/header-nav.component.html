@@ -1,5 +1,27 @@
-<app-header-link svgName="info" svgText="help and contacts"></app-header-link>
-<div class="divider"></div>
-<app-header-link svgName="person" svgText="account"></app-header-link>
-<app-header-link svgName="like" svgText="your lists"></app-header-link>
-<app-header-link svgName="basket" svgText="basket"></app-header-link>
+<nav>
+    <ul class="list">
+        <app-header-link
+            svgName="info"
+            svgText="help and contacts"></app-header-link>
+        <div class="divider"></div>
+        <app-header-link svgName="person" svgText="account">
+            <app-menu-link [IsNested]="true" [svgName]="'like'"
+                >hello</app-menu-link
+            >
+            <app-menu-link [IsNested]="true" [svgName]="'like'"
+                >hello</app-menu-link
+            >
+            <app-menu-link [IsNested]="true" [svgName]="'like'"
+                >hello</app-menu-link
+            >
+            <app-menu-link [IsNested]="true" [svgName]="'like'"
+                >hello</app-menu-link
+            >
+            <app-menu-link [IsNested]="true" [svgName]="'like'"
+                >hello</app-menu-link
+            >
+        </app-header-link>
+        <app-header-link svgName="like" svgText="your lists"></app-header-link>
+        <app-header-link svgName="basket" svgText="basket"></app-header-link>
+    </ul>
+</nav>

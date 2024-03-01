@@ -1,7 +1,18 @@
 @import 'mixins';
 @import 'colors';
-:host {
-    //transition: 0.3s linear;
+.link {
+    position: relative;
+}
+
+.link:hover .main-menu {
+    transform: rotateX(0deg);
+    top: 100%;
+}
+
+.link:hover .icon {
+    box-shadow:
+        -1px -1px 1px $text,
+        2px -2px $background;
 }
 .icon {
     height: auto;
@@ -9,17 +20,13 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transition: 0.2s linear;
+    transition: 0.1s linear;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    padding: 0 10px;
 
     cursor: pointer;
-
-    &:hover {
-        transform: scale(1.1);
-        .icon__svg {
-            fill: $primary;
-        }
-        color: $primary;
-    }
+    border-bottom: none;
 
     &__svg {
         transition: 0.2s linear;
@@ -36,13 +43,28 @@
         transform: translate(0, -10px);
     }
 }
-p {
-    margin-bottom: 0;
-}
 
 .textOnTop {
     opacity: 1;
     font-size: 14px;
     height: 32px;
     transform: translate(0, 0);
+}
+
+.main-menu {
+    transition: 0.3s;
+    min-width: 300px;
+
+    transform: rotateX(90deg);
+    background-color: $background-app;
+    padding: 0 15px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    box-shadow:
+        -1px 1px 1px $text,
+        2px -2px 1px $background;
 }

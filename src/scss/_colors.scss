@@ -22,4 +22,5 @@ $text: mat.get-theme-color($dark-theme, foreground, text);
 $secondary-text: mat.get-theme-color($dark-theme, foreground, secondary-text);
 $background: mat.get-theme-color($dark-theme, background, card);
 $background-dark: mat.get-theme-color($dark-theme, background, background);
+$background-app: mat.get-theme-color($dark-theme, background, app-bar);
 $type: mat.get-theme-type($dark-theme);

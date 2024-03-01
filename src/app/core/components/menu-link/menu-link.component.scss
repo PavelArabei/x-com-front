@@ -1,0 +1,44 @@
+@import 'mixins';
+@import 'colors';
+
+.icon {
+    //display: flex;
+    //justify-content: space-around;
+    //align-items: center;
+    //flex-direction: column;
+    padding: 0 1rem;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $background;
+    }
+    &__link {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0;
+    }
+    &__link-container {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    &__svg {
+        @include icon-size(1.5rem);
+    }
+    &__text {
+        font-size: 18px;
+        font-weight: lighter;
+        letter-spacing: normal;
+    }
+
+    &__arrow-wrapper {
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+
+    &__arrow {
+        @include icon-size(1.5rem);
+    }
+}
