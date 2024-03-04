@@ -4,7 +4,7 @@ export interface SubMenuLinkContent {
     categoryIcon: string | null;
     nestedSubMenu: SubMenuLinkContent[] | null;
 }
-export type HeaderNavNames = 'account' | 'help';
+export type HeaderNavNames = 'account' | 'help' | 'basket' | 'lists';
 
 export type HeaderNavInfo = {
     [key in HeaderNavNames]: SubMenuLinkContent;
@@ -107,6 +107,18 @@ const categoryNames: HeaderNavInfo = {
                 nestedSubMenu: null,
             },
         ],
+    },
+    basket: {
+        categoryName: 'Basket',
+        categoryIcon: 'basket',
+        categoryRoutePath: 'basket',
+        nestedSubMenu: [],
+    },
+    lists: {
+        categoryName: 'Your lists',
+        categoryIcon: 'like',
+        categoryRoutePath: 'lists',
+        nestedSubMenu: [],
     },
 };
 export default categoryNames;

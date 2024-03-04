@@ -7,7 +7,7 @@
             <div class="sub-menu-wrapper small-margin-top">
                 <span class="small-text">Popular topics</span>
             </div>
-            <div>
+            <ul class="small-margin-bottom">
                 @for (info of help.nestedSubMenu; track info.categoryName) {
                     <app-menu-link
                         [link]="info.categoryRoutePath"
@@ -15,7 +15,7 @@
                         >{{ info.categoryName }}</app-menu-link
                     >
                 }
-            </div>
+            </ul>
         </app-header-link>
         <div class="divider"></div>
         <app-header-link
@@ -26,7 +26,7 @@
                 <span class="small-text">Hi,</span>
                 <h2 class="title">Pavel</h2>
             </div>
-            <div class="big-margin-top">
+            <ul class="big-margin-top">
                 @for (info of account.nestedSubMenu; track info.categoryName) {
                     <app-menu-link
                         [link]="info.categoryRoutePath"
@@ -34,7 +34,7 @@
                         >{{ info.categoryName }}</app-menu-link
                     >
                 }
-            </div>
+            </ul>
             <div class="big-margin-top">
                 <mat-divider class="big-margin-bottom"></mat-divider>
                 <div class="button-container">
@@ -42,11 +42,27 @@
                 </div>
             </div>
         </app-header-link>
-        <app-header-link link="#" svgName="like" svgText="your lists">
+        <app-header-link
+            [link]="list.categoryRoutePath"
+            [svgName]="list.categoryIcon"
+            [svgText]="list.categoryName"
+            [rightDirection]="true">
         </app-header-link>
         <app-header-link
-            link="#"
-            svgName="basket"
-            svgText="basket"></app-header-link>
+            [svgName]="basket.categoryIcon"
+            [link]="basket.categoryRoutePath"
+            [svgText]="basket.categoryName"
+            [rightDirection]="true"
+            [width]="350">
+            <div class="basket-content">
+                <h2>Your shopping cart is empty</h2>
+                <p class="small-text">Are you looking for inspiration?</p>
+                <a [routerLink]="['/']">
+                    <button class="button primary-button">
+                        Go to the home page
+                    </button>
+                </a>
+            </div>
+        </app-header-link>
     </ul>
 </nav>

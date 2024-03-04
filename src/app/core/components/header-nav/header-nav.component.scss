@@ -31,3 +31,12 @@
 .button-container {
     margin: $smallMargin $mediumMargin;
 }
+.basket-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: $smallMargin;
+    margin: $mediumMargin 0;
+}
+.button-text {
+}

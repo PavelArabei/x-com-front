@@ -1,0 +1,13 @@
+@import 'colors';
+
+:host {
+    width: 100vw;
+    background-color: $background-dark;
+}
+
+.nav {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    //height: 50px;
+}

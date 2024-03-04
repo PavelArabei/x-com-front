@@ -1,18 +1,23 @@
-@if (isHandset$ | async) {
-    <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-    </button>
-}
+<header class="header">
+    <div class="header__primary">
+        @if (isHandset$ | async) {
+            <button
+                type="button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="drawer.toggle()">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+        }
 
-<mat-icon
-    color="accent"
-    class="icon"
-    [class.on-top]="isOnTop | async"
-    [svgIcon]="'main-logo'"
-    aria-label="Main page logo"></mat-icon>
-<app-main-search class="main-search"></app-main-search>
-<app-header-nav></app-header-nav>
+        <mat-icon
+            color="accent"
+            class="icon"
+            [class.on-top]="isOnTop | async"
+            [svgIcon]="'main-logo'"
+            aria-label="Main page logo"></mat-icon>
+        <app-main-search class="main-search"></app-main-search>
+        <app-header-nav></app-header-nav>
+    </div>
+    <app-header-products-nav></app-header-products-nav>
+</header>

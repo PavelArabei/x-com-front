@@ -3,6 +3,8 @@
 @import 'margins';
 @import 'own-classes';
 @import 'normolize';
+@import 'scroll';
+
 html,
 body {
     box-sizing: border-box;
@@ -10,7 +12,7 @@ body {
 
 body {
     margin: 0;
-    background-color: $background;
+    background-color: $background-app;
     color: $text;
 }
 
