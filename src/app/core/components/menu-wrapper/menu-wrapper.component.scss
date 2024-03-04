@@ -1,8 +1,7 @@
 @import 'colors';
 
 .menu-wrapper {
-    //transition: 0.2s;
-    min-width: 300px;
+    min-width: 200px;
 
     transform: rotateX(-90deg);
     background-color: $background-app;

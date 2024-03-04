@@ -1,27 +1,52 @@
 <nav>
     <ul class="list">
         <app-header-link
-            svgName="info"
-            svgText="help and contacts"></app-header-link>
-        <div class="divider"></div>
-        <app-header-link svgName="person" svgText="account">
-            <app-menu-link [IsNested]="true" [svgName]="'like'"
-                >hello</app-menu-link
-            >
-            <app-menu-link [IsNested]="true" [svgName]="'like'"
-                >hello</app-menu-link
-            >
-            <app-menu-link [IsNested]="true" [svgName]="'like'"
-                >hello</app-menu-link
-            >
-            <app-menu-link [IsNested]="true" [svgName]="'like'"
-                >hello</app-menu-link
-            >
-            <app-menu-link [IsNested]="true" [svgName]="'like'"
-                >hello</app-menu-link
-            >
+            [link]="help.categoryRoutePath"
+            [svgName]="help.categoryIcon"
+            [svgText]="help.categoryName">
+            <div class="sub-menu-wrapper small-margin-top">
+                <span class="small-text">Popular topics</span>
+            </div>
+            <div>
+                @for (info of help.nestedSubMenu; track info.categoryName) {
+                    <app-menu-link
+                        [link]="info.categoryRoutePath"
+                        [svgName]="info.categoryIcon"
+                        >{{ info.categoryName }}</app-menu-link
+                    >
+                }
+            </div>
         </app-header-link>
-        <app-header-link svgName="like" svgText="your lists"></app-header-link>
-        <app-header-link svgName="basket" svgText="basket"></app-header-link>
+        <div class="divider"></div>
+        <app-header-link
+            [link]="account.categoryRoutePath"
+            [svgName]="account.categoryIcon"
+            [svgText]="account.categoryName">
+            <div class="sub-menu-wrapper small-margin-top">
+                <span class="small-text">Hi,</span>
+                <h2 class="title">Pavel</h2>
+            </div>
+            <div class="big-margin-top">
+                @for (info of account.nestedSubMenu; track info.categoryName) {
+                    <app-menu-link
+                        [link]="info.categoryRoutePath"
+                        [svgName]="info.categoryIcon"
+                        >{{ info.categoryName }}</app-menu-link
+                    >
+                }
+            </div>
+            <div class="big-margin-top">
+                <mat-divider class="big-margin-bottom"></mat-divider>
+                <div class="button-container">
+                    <button class="button">Sing out</button>
+                </div>
+            </div>
+        </app-header-link>
+        <app-header-link link="#" svgName="like" svgText="your lists">
+        </app-header-link>
+        <app-header-link
+            link="#"
+            svgName="basket"
+            svgText="basket"></app-header-link>
     </ul>
 </nav>

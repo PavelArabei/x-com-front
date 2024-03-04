@@ -1,12 +1,16 @@
 import { AsyncPipe } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import {
+    Component, inject, Input, OnInit
+} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { HeaderNavComponent } from '@core/components/header-nav/header-nav.component';
 import { MainSearchComponent } from '@core/components/main-search/main-search.component';
+import { ScrollEmitterService } from '@core/services/scroll-emitter/scroll-emitter.service';
 import { Observable } from 'rxjs';
+import { shareReplay } from 'rxjs/operators';
 
 @Component({
     selector: 'app-header',
@@ -23,7 +27,14 @@ import { Observable } from 'rxjs';
     templateUrl: './header.component.html',
     styleUrl: './header.component.scss',
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit {
     @Input() drawer!: MatSidenav;
     @Input() isHandset$!: Observable<boolean>;
+
+    private _scrollService = inject(ScrollEmitterService);
+    isOnTop: Observable<boolean> | null = null;
+
+    ngOnInit(): void {
+        this.isOnTop = this._scrollService.isOnTop$().pipe(shareReplay());
+    }
 }

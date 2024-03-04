@@ -1,5 +1,5 @@
 @import 'colors';
-
+@import 'margins';
 .list {
     margin: 0;
     display: flex;
@@ -12,4 +12,22 @@
     transition: 0.3s linear;
     margin: 10px auto;
     transform: translate(0, -0.4rem);
+}
+
+.sub-menu-wrapper {
+    padding-left: $mediumMargin;
+}
+
+.small-text {
+    font-size: 16px;
+    //font-weight: lighter;
+    color: $secondary-text;
+}
+.title {
+    margin: 0;
+    padding: 0;
+    line-height: 1rem;
+}
+.button-container {
+    margin: $smallMargin $mediumMargin;
 }

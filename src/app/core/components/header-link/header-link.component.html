@@ -2,14 +2,18 @@
     class="link"
     (mouseenter)="isOnHover = true"
     (mouseleave)="isOnHover = false">
-    <a class="icon" href="#">
-        <mat-icon class="icon__svg" [svgIcon]="svgName"></mat-icon>
-        <p [class.textOnTop]="(isOnTop | async) === true" class="icon__text">
+    <a class="icon" [routerLink]="link">
+        @if (svgName) {
+            <mat-icon class="icon__svg" [svgIcon]="svgName"></mat-icon>
+        }
+        <p [class.textOnTop]="isOnTop | async" class="icon__text">
             {{ svgText | titlecase }}
         </p>
     </a>
-    <app-menu-wrapper [isOnHover]="isOnHover" [rightDirection]="true">
+    <app-menu-wrapper
+        class="flex-colum"
+        [isOnHover]="isOnHover"
+        [rightDirection]="rightDirection">
         <ng-content></ng-content>
     </app-menu-wrapper>
 </li>
-<!--@if (isOnTop | async) {-->

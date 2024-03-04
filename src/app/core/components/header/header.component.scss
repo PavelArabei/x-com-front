@@ -10,8 +10,17 @@
 }
 
 .icon {
+    transform: translateY(-0.25rem);
+    transition: 0.3s;
     @include icon-size(48px);
+    cursor: pointer;
+    margin-right: 2rem;
 }
 .main-search {
     flex-grow: 1;
+}
+
+.on-top {
+    transform: rotate(180deg) translate(-0rem, 0.2rem);
+    scale: (1.5);
 }
