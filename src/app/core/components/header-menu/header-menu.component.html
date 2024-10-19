@@ -1,6 +1,15 @@
 <ul>
-    @for (category of menuItems; track category.categoryName) {
-        <li class="icon">
+    @for (
+        category of menuItems;
+        track category.categoryName;
+        let first = $first
+    ) {
+        <li
+            class="icon"
+            #menuItem
+            [ngClass]="{ hover: first }"
+            (mouseover)="menuItem.classList.add('hover')"
+            (mouseleave)="menuItem.classList.remove('hover')">
             <a
                 class="icon__link"
                 [routerLink]="category.categoryRoutePath"
@@ -21,10 +30,12 @@
                     }
                 </div>
             </a>
-            @if (category.nestedSubMenu) {
+            @if (
+                category.nestedSubMenu && menuItem.classList.contains('hover')
+            ) {
                 <app-header-menu
-                    [menuItems]="category.nestedSubMenu"
-                    class="sub-menu"></app-header-menu>
+                    class="sub-menu"
+                    [menuItems]="category.nestedSubMenu"></app-header-menu>
             }
         </li>
     }

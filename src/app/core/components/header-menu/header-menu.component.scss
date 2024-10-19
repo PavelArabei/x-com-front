@@ -3,9 +3,9 @@
 @import 'margins';
 
 .icon {
-    position: relative;
     padding: 0 $smallMargin;
     cursor: pointer;
+    color: $text;
 
     &:hover {
         background-color: $background;
@@ -39,12 +39,12 @@
     }
 }
 
-li:hover > ul {
-    display: block;
+ul {
+    width: 350px;
 }
-ul ul {
-    display: none;
+
+.sub-menu {
     position: absolute;
-    left: 100%;
+    left: 50%;
     top: 0;
 }
