@@ -11,8 +11,8 @@ import { IconRegisterService } from '@core/services/icon-register.service';
     styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-    iconRegisterService: IconRegisterService = inject(IconRegisterService);
-    ngOnInit() {
+    private readonly iconRegisterService: IconRegisterService = inject(IconRegisterService);
+    public ngOnInit(): void {
         this.iconRegisterService.registerIcons();
     }
 }

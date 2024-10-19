@@ -7,7 +7,6 @@ import { icons } from '@icons/icons';
     providedIn: 'root',
 })
 export class IconRegisterService {
-    public icons = null;
     constructor(
         private readonly iconRegistry: MatIconRegistry,
         private readonly sanitizer: DomSanitizer
