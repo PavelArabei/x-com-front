@@ -2,18 +2,18 @@
 
 .menu-wrapper {
     min-width: 200px;
-
     transform: rotateX(-90deg);
-    background-color: $background-app;
+    background-color: $background-contrast;
+    overflow: hidden;
+
     position: absolute;
     top: 100%;
     left: 0;
+
+    border: 0.5px solid $primary;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
-    box-shadow:
-        -1px 1px 1px 1px $background,
-        1px -1px 1px $background;
 }
 .on-hover {
     transform: rotateX(0);

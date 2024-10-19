@@ -12,8 +12,13 @@ export class MenuWrapperComponent {
     @Input({ required: true }) isOnHover: boolean = false;
     @Input() rightDirection: boolean = false;
     @Input() width: number = 250;
+    @Input() height: number | 'auto' = 'auto';
 
     get widthInNecessaryFormat() {
         return `${this.width}px`;
+    }
+
+    get heightInNecessaryFormat() {
+        return this.height === 'auto' ? this.height : `${this.height}px`;
     }
 }

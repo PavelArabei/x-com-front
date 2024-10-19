@@ -1,5 +1,6 @@
 @import 'colors';
 @import 'margins';
+
 .list {
     margin: 0;
     display: flex;
@@ -20,8 +21,7 @@
 
 .small-text {
     font-size: 16px;
-    //font-weight: lighter;
-    color: $secondary-text;
+    color: $text-contrast;
 }
 .title {
     margin: 0;
@@ -37,6 +37,4 @@
     align-items: center;
     gap: $smallMargin;
     margin: $mediumMargin 0;
-}
-.button-text {
 }

@@ -1,15 +1,6 @@
-export interface SubMenuLinkContent {
-    categoryName: string;
-    categoryRoutePath: string;
-    categoryIcon: string | null;
-    nestedSubMenu: SubMenuLinkContent[] | null;
-}
-export type HeaderNavNames = 'account' | 'help' | 'basket' | 'lists';
+import { HeaderNavInfo } from '@core/types/cantegories/header-nav.type';
 
-export type HeaderNavInfo = {
-    [key in HeaderNavNames]: SubMenuLinkContent;
-};
-const categoryNames: HeaderNavInfo = {
+export const headerCategoryNames: HeaderNavInfo = {
     help: {
         categoryName: 'Help and contacts',
         categoryIcon: 'info',
@@ -60,7 +51,7 @@ const categoryNames: HeaderNavInfo = {
         ],
     },
     account: {
-        categoryName: 'Accaunt',
+        categoryName: 'Account',
         categoryIcon: 'account',
         categoryRoutePath: 'account',
         nestedSubMenu: [
@@ -121,4 +112,3 @@ const categoryNames: HeaderNavInfo = {
         nestedSubMenu: [],
     },
 };
-export default categoryNames;

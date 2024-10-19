@@ -3,15 +3,13 @@
 @import 'margins';
 
 .icon {
-    //display: flex;
-    //justify-content: space-around;
-    //align-items: center;
-    //flex-direction: column;
-    padding: 0 $mediumMargin;
+    position: relative;
+    padding: 0 $smallMargin;
     cursor: pointer;
 
     &:hover {
         background-color: $background;
+        color: $primary;
     }
     &__link {
         display: flex;
@@ -21,16 +19,13 @@
     }
     &__link-container {
         display: flex;
+        justify-content: center;
         align-items: center;
+        padding: $smallMargin 0;
         gap: $smallMargin;
     }
     &__svg {
         @include icon-size(1.5rem);
-    }
-    &__text {
-        font-size: 18px;
-        font-weight: lighter;
-        letter-spacing: normal;
     }
 
     &__arrow-wrapper {
@@ -42,4 +37,15 @@
     &__arrow {
         @include icon-size(1.5rem);
     }
+}
+
+
+li:hover > ul {
+  display: block;
+}
+ul ul {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
 }

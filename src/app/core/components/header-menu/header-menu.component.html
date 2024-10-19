@@ -1,0 +1,28 @@
+<ul>
+  @for (category of menuItems; track category.categoryName) {
+    <li class="icon">
+      <a class="icon__link" [routerLink]="category.categoryRoutePath" href="#">
+        <div class="icon__link-container">
+          @if (category.categoryIcon) {
+            <mat-icon class="icon__svg" [svgIcon]="category.categoryIcon"></mat-icon>
+          }
+          <span class="icon__text">{{category.categoryName}}</span>
+        </div>
+
+        <div class="icon__arrow-wrapper">
+          @if (category.nestedSubMenu) {
+            <mat-icon class="icon__arrow" [svgIcon]="'arrow-right'">
+            </mat-icon>
+          }
+
+        </div>
+      </a>
+      @if (category.nestedSubMenu) {
+        <app-header-menu
+          [menuItems]="category.nestedSubMenu"
+          class="sub-menu"
+        ></app-header-menu>
+      }
+    </li>
+  }
+</ul>

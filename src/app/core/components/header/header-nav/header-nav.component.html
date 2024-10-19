@@ -7,15 +7,12 @@
             <div class="sub-menu-wrapper small-margin-top">
                 <span class="small-text">Popular topics</span>
             </div>
-            <ul class="small-margin-bottom">
-                @for (info of help.nestedSubMenu; track info.categoryName) {
-                    <app-menu-link
-                        [link]="info.categoryRoutePath"
-                        [svgName]="info.categoryIcon"
-                        >{{ info.categoryName }}</app-menu-link
-                    >
-                }
-            </ul>
+          @if (help.nestedSubMenu){
+            <app-header-menu
+              [menuItems]="help.nestedSubMenu"
+            ></app-header-menu
+            >
+          }
         </app-header-link>
         <div class="divider"></div>
         <app-header-link
@@ -26,15 +23,12 @@
                 <span class="small-text">Hi,</span>
                 <h2 class="title">Pavel</h2>
             </div>
-            <ul class="big-margin-top">
-                @for (info of account.nestedSubMenu; track info.categoryName) {
-                    <app-menu-link
-                        [link]="info.categoryRoutePath"
-                        [svgName]="info.categoryIcon"
-                        >{{ info.categoryName }}</app-menu-link
-                    >
-                }
-            </ul>
+          @if (account.nestedSubMenu){
+            <app-header-menu
+              [menuItems]="account.nestedSubMenu"
+            ></app-header-menu
+            >
+          }
             <div class="big-margin-top">
                 <mat-divider class="big-margin-bottom"></mat-divider>
                 <div class="button-container">
@@ -52,12 +46,11 @@
             [svgName]="basket.categoryIcon"
             [link]="basket.categoryRoutePath"
             [svgText]="basket.categoryName"
-            [rightDirection]="true"
-            [width]="350">
+            [rightDirection]="true">
             <div class="basket-content">
                 <h2>Your shopping cart is empty</h2>
                 <p class="small-text">Are you looking for inspiration?</p>
-                <a [routerLink]="['/']">
+                <a [routerLink]="basket.categoryRoutePath">
                     <button class="button primary-button">
                         Go to the home page
                     </button>

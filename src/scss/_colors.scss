@@ -2,25 +2,50 @@
 
 @include mat.core();
 
-$dark-theme: mat.define-dark-theme(
+$theme: mat.define-theme(
     (
         color: (
-            primary: mat.define-palette(mat.$indigo-palette),
-            accent: mat.define-palette(mat.$pink-palette),
-            warn: mat.define-palette(mat.$red-palette),
+            theme-type: dark,
+            primary: mat.$cyan-palette,
+            //primary: mat.$cyan-palette,
+            //secondary: mat.m2-define-palette(mat.$m2-pink-palette),
+            tertiary: mat.$cyan-palette,
         ),
-        typography: mat.define-typography-config(),
+        typography: (
+            brand-family: 'Comic Sans',
+            bold-weight: 700,
+        ),
+        density: (
+            scale: -1,
+        ),
     )
 );
 
-@include mat.all-component-themes($dark-theme);
-$font-family: mat.get-theme-typography($dark-theme, body-1, 'font-family');
-$primary: mat.get-theme-color($dark-theme, primary, default);
-$accent: mat.get-theme-color($dark-theme, accent, A400);
-$warn: mat.get-theme-color($dark-theme, warn, 700);
-$text: mat.get-theme-color($dark-theme, foreground, text);
-$secondary-text: mat.get-theme-color($dark-theme, foreground, secondary-text);
-$background: mat.get-theme-color($dark-theme, background, card);
-$background-dark: mat.get-theme-color($dark-theme, background, background);
-$background-app: mat.get-theme-color($dark-theme, background, app-bar);
-$type: mat.get-theme-type($dark-theme);
+//$font-family: mat.get-theme-typography($dark-theme, body-1, 'font-family');
+//$primary: mat.get-theme-color($dark-theme, primary, default);
+//$accent: mat.get-theme-color($dark-theme, accent, A400);
+//$warn: mat.get-theme-color($dark-theme, warn, 700);
+//$text: mat.get-theme-color($dark-theme, foreground, text);
+//$secondary-text: mat.get-theme-color($dark-theme, foreground, secondary-text);
+//$background: mat.get-theme-color($dark-theme, background, card);
+//$background-dark: mat.get-theme-color($dark-theme, background, background);
+//$background-app: mat.get-theme-color($dark-theme, background, app-bar);
+//$type: mat.get-theme-type($dark-theme);
+
+$font-family: mat.get-theme-typography($theme, display-medium, 'font-family');
+
+$primary: mat.get-theme-color($theme, primary, 50);
+$primary-contrast: mat.get-theme-color($theme, secondary, 40);
+
+$secondary: mat.get-theme-color($theme, tertiary, 40);
+$secondary-contrast: mat.get-theme-color($theme, tertiary, 20);
+
+$error: mat.get-theme-color($theme, error, 50);
+
+$text: mat.get-theme-color($theme, neutral, 80);
+$text-contrast: mat.get-theme-color($theme, neutral, 60);
+
+$background: mat.get-theme-color($theme, neutral, 4);
+$background-contrast: mat.get-theme-color($theme, neutral, 6);
+
+$background-secondary: mat.get-theme-color($theme, neutral, 6);

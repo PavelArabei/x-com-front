@@ -27,6 +27,7 @@ export class HeaderLinkComponent implements OnInit {
     @Input({ required: true }) svgText!: string;
     @Input({ required: true }) link!: string;
     @Input() width!: number;
+    @Input() height: number | null = null;
     @Input() rightDirection: boolean = false;
 
     private _scrollService = inject(ScrollEmitterService);

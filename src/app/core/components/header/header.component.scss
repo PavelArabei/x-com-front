@@ -1,7 +1,9 @@
 @import 'mixins';
+@import 'colors';
 
 :host {
     width: 100%;
+    background-color: $background;
 }
 .header {
     display: flex;

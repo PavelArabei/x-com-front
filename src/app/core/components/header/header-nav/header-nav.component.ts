@@ -2,28 +2,29 @@ import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatDivider } from '@angular/material/divider';
 import { RouterLink } from '@angular/router';
-import categoryNames from '@assets/mock/category-names';
+import { headerCategoryNames } from '@assets/mock/category-names';
 import { HeaderLinkComponent } from '@core/components/header-link/header-link.component';
-import { MenuLinkComponent } from '@core/components/menu-link/menu-link.component';
+import { HeaderMenuComponent } from '@core/components/header-menu/header-menu.component';
 import { MenuWrapperComponent } from '@core/components/menu-wrapper/menu-wrapper.component';
 
 @Component({
     selector: 'app-header-nav',
     standalone: true,
     imports: [
-        HeaderLinkComponent,
+        HeaderMenuComponent,
         AsyncPipe,
         MenuWrapperComponent,
-        MenuLinkComponent,
+        HeaderMenuComponent,
         MatDivider,
         RouterLink,
+        HeaderLinkComponent,
     ],
     templateUrl: './header-nav.component.html',
     styleUrl: './header-nav.component.scss',
 })
 export class HeaderNavComponent {
-    navInfo = categoryNames;
-    protected readonly categoryNames = categoryNames;
+    navInfo = headerCategoryNames;
+    protected readonly categoryNames = headerCategoryNames;
 
     get account() {
         return this.navInfo.account;

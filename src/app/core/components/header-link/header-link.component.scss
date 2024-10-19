@@ -1,19 +1,10 @@
 @import 'mixins';
 @import 'colors';
+
 .link {
     position: relative;
 }
 
-.link:hover .main-menu {
-    transform: rotateX(0deg);
-    top: 100%;
-}
-
-.link:hover .icon {
-    box-shadow:
-        -1px -1px 1px $text,
-        2px -2px $background;
-}
 .icon {
     height: auto;
     display: flex;
@@ -24,13 +15,13 @@
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     padding: 0 10px;
+    border: 1px solid transparent;
 
     cursor: pointer;
-    border-bottom: none;
 
     &__svg {
         transition: 0.2s linear;
-        @include icon-size(36px);
+        @include icon-size(2.5rem);
     }
     &__text {
         opacity: 0;
@@ -56,7 +47,7 @@
     min-width: 300px;
 
     transform: rotateX(90deg);
-    background-color: $background-app;
+    background-color: $background;
     padding: 0 15px;
     position: absolute;
     top: 100%;
@@ -65,6 +56,34 @@
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     box-shadow:
-        -1px 1px 1px $text,
+        -1px 1px 1px $primary,
         2px -2px 1px $background;
+}
+
+.link:hover {
+    background-color: $background-secondary;
+}
+
+.link:hover .main-menu {
+    transform: rotateX(0deg);
+    top: 100%;
+}
+
+.link:hover .icon {
+    border: 1px solid $primary;
+}
+
+.link:hover .icon__svg {
+    transform: scale(1.2);
+}
+
+.link:hover .icon::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 1px;
+    width: calc(100% - 2px);
+    height: 2px;
+    background-color: $background-secondary;
+    z-index: 10;
 }

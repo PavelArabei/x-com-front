@@ -1,8 +1,0 @@
-<nav class="nav container">
-    @for (product of products; track product.categoryName) {
-        <app-header-link
-            [link]="product.categoryRoutePath"
-            [svgName]="product.categoryIcon"
-            [svgText]="product.categoryName"></app-header-link>
-    }
-</nav>

@@ -3,13 +3,13 @@
 
 .button {
     transition: 0.2s;
-    border: 1px solid $accent;
+    border: 1px solid $primary;
     width: 100%;
     border-radius: 0.5rem;
-    color: $secondary-text;
+    color: $text-contrast;
     &:hover {
         color: $text;
-        background-color: $accent;
+        background-color: $primary;
     }
 }
 

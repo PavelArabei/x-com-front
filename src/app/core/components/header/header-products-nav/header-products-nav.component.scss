@@ -1,8 +1,8 @@
-@import 'colors';
+@import '../../../../../scss/colors';
 
 :host {
     width: 100vw;
-    background-color: $background-dark;
+    background-color: $background;
 }
 
 .nav {
