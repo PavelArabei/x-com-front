@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { SkrollEmitterService } from './scroll-emitter.service';
+import { ScrollEmitterService } from './scroll-emitter.service';
 
 describe('SkrollEmitterService', () => {
-    let service: SkrollEmitterService;
+    let service: ScrollEmitterService;
 
     beforeEach(() => {
         TestBed.configureTestingModule({});
-        service = TestBed.inject(SkrollEmitterService);
+        service = TestBed.inject(ScrollEmitterService);
     });
 
     it('should be created', () => {
