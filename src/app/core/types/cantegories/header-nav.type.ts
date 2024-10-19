@@ -7,15 +7,15 @@ export type HeaderNavInfo = {
 };
 
 export type HeaderCategoryNames =
-  | 'computers'
-  | 'smartphones'
-  | 'gaming'
-  | 'components'
-  | 'peripherals'
-  | 'tvAudio'
-  | 'smartHome'
-  | 'accessories'
-  | 'trends';
+    | 'computers'
+    | 'smartphones'
+    | 'gaming'
+    | 'components'
+    | 'peripherals'
+    | 'tvAudio'
+    | 'smartHome'
+    | 'accessories'
+    | 'trends';
 
 export type HeaderCategoryInfo = {
     [key in HeaderCategoryNames]: SubMenuLinkContent;

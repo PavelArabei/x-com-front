@@ -1,7 +1,5 @@
 import { AsyncPipe, TitleCasePipe } from '@angular/common';
-import {
-    Component, inject, Input, OnInit
-} from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { MatIcon } from '@angular/material/icon';
 import { RouterLink } from '@angular/router';
 import { MenuWrapperComponent } from '@core/components/menu-wrapper/menu-wrapper.component';

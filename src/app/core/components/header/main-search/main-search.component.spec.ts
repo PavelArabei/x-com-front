@@ -17,7 +17,7 @@ describe('MainSearchComponent', () => {
         const sanitizer = TestBed.inject(DomSanitizer);
         registry.addSvgIconLiteral(
             'search',
-            sanitizer.bypassSecurityTrustHtml('<svg></svg>'),
+            sanitizer.bypassSecurityTrustHtml('<svg></svg>')
         );
         fixture = TestBed.createComponent(MainSearchComponent);
         component = fixture.componentInstance;

@@ -27,13 +27,13 @@
             "@shared/*": ["./src/app/shared/*"],
             "@utils/*": ["./src/app/utils/*"],
             "@assets/*": ["./src/assets/*"],
-            "@icons/*": ["./src/assets/icons/*"],
-        },
+            "@icons/*": ["./src/assets/icons/*"]
+        }
     },
     "angularCompilerOptions": {
         "enableI18nLegacyMessageIdFormat": false,
         "strictInjectionParameters": true,
         "strictInputAccessModifiers": true,
-        "strictTemplates": true,
-    },
+        "strictTemplates": true
+    }
 }

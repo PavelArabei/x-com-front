@@ -1,6 +1,6 @@
 import { SubMenuLinkContent } from '@core/types/sub-menu-link-content.interface';
 
-export const laptopsNotebooksUltrabooksNames:SubMenuLinkContent[] = [
+export const laptopsNotebooksUltrabooksNames: SubMenuLinkContent[] = [
     {
         categoryName: 'Laptops 17.3 and larger',
         categoryIcon: null,
@@ -44,7 +44,7 @@ export const laptopsNotebooksUltrabooksNames:SubMenuLinkContent[] = [
         nestedSubMenu: null,
     },
 ];
-export const computersCategoryNames : SubMenuLinkContent[] = [
+export const computersCategoryNames: SubMenuLinkContent[] = [
     {
         categoryName: 'Laptops and notebooks',
         categoryIcon: null,

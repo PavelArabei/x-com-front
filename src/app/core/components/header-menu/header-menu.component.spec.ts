@@ -10,8 +10,7 @@ describe('MenuLinkComponent', () => {
         await TestBed.configureTestingModule({
             imports: [HeaderMenuComponent],
             schemas: [CUSTOM_ELEMENTS_SCHEMA],
-        })
-            .compileComponents();
+        }).compileComponents();
 
         fixture = TestBed.createComponent(HeaderMenuComponent);
         component = fixture.componentInstance;

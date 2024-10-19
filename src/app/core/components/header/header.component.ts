@@ -1,7 +1,5 @@
 import { AsyncPipe } from '@angular/common';
-import {
-    Component, inject, Input, OnInit
-} from '@angular/core';
+import { Component, inject, Input, OnInit } from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIcon, MatIconModule } from '@angular/material/icon';
 import { MatSidenav } from '@angular/material/sidenav';

@@ -1,25 +1,29 @@
 <nav class="nav container">
-    @for (product of products; track product.categoryName; let count = $count; let i =  $index) {
+    @for (
+        product of products;
+        track product.categoryName;
+        let count = $count;
+        let i = $index
+    ) {
         <app-header-link
             [link]="product.categoryRoutePath"
             [svgName]="product.categoryIcon"
             [svgText]="product.categoryName"
-            [rightDirection]="i > count/2"
-            [width]="700"
-        >
-<!--          @if(product.nestedSubMenu){-->
-<!--            <ul>-->
-<!--              @for (nestedProduct of product.nestedSubMenu; track nestedProduct.categoryName) {-->
-<!--                <app-header-menu-->
-<!--                  [link]="nestedProduct.categoryRoutePath"-->
-<!--                  [svgName]="nestedProduct.categoryIcon"-->
-<!--                  [IsNested]="nestedProduct.nestedSubMenu"-->
-<!--                >{{ nestedProduct.categoryName}}</app-header-menu-->
-<!--                >-->
-<!--              }-->
-<!--            </ul>-->
+            [rightDirection]="i > count / 2"
+            [width]="700">
+            <!--          @if(product.nestedSubMenu){-->
+            <!--            <ul>-->
+            <!--              @for (nestedProduct of product.nestedSubMenu; track nestedProduct.categoryName) {-->
+            <!--                <app-header-menu-->
+            <!--                  [link]="nestedProduct.categoryRoutePath"-->
+            <!--                  [svgName]="nestedProduct.categoryIcon"-->
+            <!--                  [IsNested]="nestedProduct.nestedSubMenu"-->
+            <!--                >{{ nestedProduct.categoryName}}</app-header-menu-->
+            <!--                >-->
+            <!--              }-->
+            <!--            </ul>-->
 
-<!--          }-->
+            <!--          }-->
         </app-header-link>
     }
 </nav>

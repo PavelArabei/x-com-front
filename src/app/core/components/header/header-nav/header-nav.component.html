@@ -7,12 +7,10 @@
             <div class="sub-menu-wrapper small-margin-top">
                 <span class="small-text">Popular topics</span>
             </div>
-          @if (help.nestedSubMenu){
-            <app-header-menu
-              [menuItems]="help.nestedSubMenu"
-            ></app-header-menu
-            >
-          }
+            @if (help.nestedSubMenu) {
+                <app-header-menu
+                    [menuItems]="help.nestedSubMenu"></app-header-menu>
+            }
         </app-header-link>
         <div class="divider"></div>
         <app-header-link
@@ -23,12 +21,10 @@
                 <span class="small-text">Hi,</span>
                 <h2 class="title">Pavel</h2>
             </div>
-          @if (account.nestedSubMenu){
-            <app-header-menu
-              [menuItems]="account.nestedSubMenu"
-            ></app-header-menu
-            >
-          }
+            @if (account.nestedSubMenu) {
+                <app-header-menu
+                    [menuItems]="account.nestedSubMenu"></app-header-menu>
+            }
             <div class="big-margin-top">
                 <mat-divider class="big-margin-bottom"></mat-divider>
                 <div class="button-container">
