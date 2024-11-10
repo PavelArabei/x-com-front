@@ -14,7 +14,10 @@
             [width]="700">
             @if (product.nestedSubMenu && category.isOnHover) {
                 <app-header-menu
-                    [menuItems]="product.nestedSubMenu"></app-header-menu>
+                    [additionalRoutePath]="routerPath"
+                    [nestingLevel]="1"
+                    [menuItems]="product.nestedSubMenu"
+                    [title]="product.categoryName"></app-header-menu>
             }
         </app-header-link>
     }
