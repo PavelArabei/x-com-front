@@ -9,7 +9,8 @@
             </div>
             @if (help.nestedSubMenu) {
                 <app-header-menu
-                    [menuItems]="help.nestedSubMenu"></app-header-menu>
+                    [menuItems]="help.nestedSubMenu"
+                    [title]="help.categoryName"></app-header-menu>
             }
         </app-header-link>
         <div class="divider"></div>
@@ -23,7 +24,8 @@
             </div>
             @if (account.nestedSubMenu) {
                 <app-header-menu
-                    [menuItems]="account.nestedSubMenu"></app-header-menu>
+                    [menuItems]="account.nestedSubMenu"
+                    [title]="account.categoryName"></app-header-menu>
             }
             <div class="big-margin-top">
                 <mat-divider class="big-margin-bottom"></mat-divider>
@@ -46,11 +48,9 @@
             <div class="basket-content">
                 <h2>Your shopping cart is empty</h2>
                 <p class="small-text">Are you looking for inspiration?</p>
-                <a [routerLink]="basket.categoryRoutePath">
-                    <button class="button primary-button">
-                        Go to the home page
-                    </button>
-                </a>
+                <app-button-link [link]="basket.categoryRoutePath"
+                    >Go to the home page</app-button-link
+                >
             </div>
         </app-header-link>
     </ul>

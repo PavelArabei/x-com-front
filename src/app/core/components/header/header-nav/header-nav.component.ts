@@ -6,6 +6,7 @@ import { headerCategoryNames } from '@assets/mock/category-names';
 import { HeaderLinkComponent } from '@core/components/header-link/header-link.component';
 import { HeaderMenuComponent } from '@core/components/header-menu/header-menu.component';
 import { MenuWrapperComponent } from '@core/components/menu-wrapper/menu-wrapper.component';
+import { ButtonLinkComponent } from '@shared/components/button-link/button-link.component';
 
 @Component({
     selector: 'app-header-nav',
@@ -18,6 +19,7 @@ import { MenuWrapperComponent } from '@core/components/menu-wrapper/menu-wrapper
         MatDivider,
         RouterLink,
         HeaderLinkComponent,
+        ButtonLinkComponent,
     ],
     templateUrl: './header-nav.component.html',
     styleUrl: './header-nav.component.scss',
