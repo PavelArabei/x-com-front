@@ -1,16 +1,29 @@
-@import 'mixins';
-@import 'colors';
-@import 'margins';
+@use 'mixins';
+@use 'margins';
+@use 'colors';
+
+$width: 350px;
+
+:host {
+    width: $width;
+}
+
+.title-wrapper {
+    margin: margins.$s 0 margins.$s 0;
+    padding: 0 margins.$s;
+
+    &__title {
+        color: colors.$text-contrast;
+        font-weight: bold;
+    }
+}
 
 .icon {
-    padding: 0 $smallMargin;
+    padding: 0 margins.$s;
     cursor: pointer;
-    color: $text;
+    color: colors.$text;
+    width: $width;
 
-    &:hover {
-        background-color: $background;
-        color: $primary;
-    }
     &__link {
         display: flex;
         justify-content: space-between;
@@ -21,11 +34,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: $smallMargin 0;
-        gap: $smallMargin;
+        padding: margins.$s 0;
+        gap: margins.$s;
     }
     &__svg {
-        @include icon-size(1.5rem);
+        @include mixins.icon-size(1.5rem);
     }
 
     &__arrow-wrapper {
@@ -35,16 +48,37 @@
     }
 
     &__arrow {
-        @include icon-size(1.5rem);
+        @include mixins.icon-size(1.5rem);
     }
 }
 
-ul {
-    width: 350px;
+.hover {
+    background-color: colors.$background;
+    color: colors.$primary;
 }
 
 .sub-menu {
     position: absolute;
     left: 50%;
     top: 0;
+}
+
+.last-menu {
+    display: flex;
+    gap: margins.$s;
+    width: $width;
+    flex-direction: column;
+    height: $width * 2;
+    cursor: auto;
+
+    margin: margins.$s 0 margins.$s 0;
+    padding: 0 margins.$s;
+
+    &__title {
+        color: colors.$text-contrast;
+        font-weight: bold;
+    }
+    &__button {
+        color: colors.$text;
+    }
 }

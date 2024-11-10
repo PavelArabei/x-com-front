@@ -1,0 +1,13 @@
+@use 'margins';
+@use 'colors';
+
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-colum {
+    display: flex;
+    flex-direction: column;
+}

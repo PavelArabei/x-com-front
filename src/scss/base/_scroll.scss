@@ -1,4 +1,4 @@
-@import 'colors';
+@use 'colors';
 
 ::-webkit-scrollbar {
     width: 10px;
@@ -6,15 +6,15 @@
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: $background-contrast;
+    background: colors.$background-contrast;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: $primary;
+    background: colors.$primary;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: colors.$background-secondary;
 }
