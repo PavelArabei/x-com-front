@@ -27,7 +27,10 @@
             "@shared/*": ["./src/app/shared/*"],
             "@utils/*": ["./src/app/utils/*"],
             "@assets/*": ["./src/assets/*"],
-            "@icons/*": ["./src/assets/icons/*"]
+            "@icons/*": ["./src/assets/icons/*"],
+            "@home/*": ["./src/app/home/*"],
+            "@category/*": ["./src/app/category/*"],
+            "@sub-category/*": ["./src/app/sub-category/*"]
         }
     },
     "angularCompilerOptions": {
