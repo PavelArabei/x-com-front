@@ -1,42 +1,69 @@
-<ul>
-    @for (
-        category of menuItems;
-        track category.categoryName;
-        let first = $first
-    ) {
-        <li
-            class="icon"
-            #menuItem
-            [ngClass]="{ hover: first }"
-            (mouseover)="menuItem.classList.add('hover')"
-            (mouseleave)="menuItem.classList.remove('hover')">
-            <a
-                class="icon__link"
-                [routerLink]="category.categoryRoutePath"
-                href="#">
-                <div class="icon__link-container">
-                    @if (category.categoryIcon) {
-                        <mat-icon
-                            class="icon__svg"
-                            [svgIcon]="category.categoryIcon"></mat-icon>
-                    }
-                    <span class="icon__text">{{ category.categoryName }}</span>
-                </div>
+<div class="title-wrapper">
+    <h2 class="title-wrapper__title">{{ title }}</h2>
+</div>
+@if (menuItems) {
+    <ul>
+        @for (category of menuItems; track category.categoryName) {
+            <li
+                class="icon"
+                #menuItem
+                [ngClass]="{ hover: $first }"
+                (mouseover)="menuItem.classList.add('hover')"
+                (mouseleave)="menuItem.classList.remove('hover')">
+                <a
+                    (focus)="menuItem.classList.add('hover')"
+                    (blur)="menuItem.classList.remove('hover')"
+                    class="icon__link"
+                    [routerLink]="getRouterLink(category.categoryRoutePath)"
+                    href="#">
+                    <div class="icon__link-container">
+                        @if (category.categoryIcon) {
+                            <mat-icon
+                                class="icon__svg"
+                                [svgIcon]="category.categoryIcon"></mat-icon>
+                        }
+                        <span class="icon__text">{{
+                            category.categoryName
+                        }}</span>
+                    </div>
 
-                <div class="icon__arrow-wrapper">
-                    @if (category.nestedSubMenu) {
-                        <mat-icon class="icon__arrow" [svgIcon]="'arrow-right'">
-                        </mat-icon>
+                    <div class="icon__arrow-wrapper">
+                        @if (category.nestedSubMenu) {
+                            <mat-icon
+                                class="icon__arrow"
+                                [svgIcon]="'arrow-right'">
+                            </mat-icon>
+                        }
+                    </div>
+                </a>
+                @if (nestingLevel > 0 && menuItem.classList.contains('hover')) {
+                    @if (category.nestedSubMenu?.length) {
+                        <app-header-menu
+                            class="sub-menu"
+                            [additionalRoutePath]="subCategoryRouterPath"
+                            [nestingLevel]="nestingLevel - 1"
+                            [menuItems]="category.nestedSubMenu"
+                            [title]="category.categoryName"></app-header-menu>
+                    } @else if (!category.nestedSubMenu?.length) {
+                        <div class="sub-menu">
+                            <div class="last-menu">
+                                <h2 class="last-menu__title">
+                                    {{ category.categoryName }}
+                                </h2>
+                                <app-button-link
+                                    class="last-menu__button"
+                                    [link]="
+                                        getRouterLink(
+                                            category.categoryRoutePath
+                                        )
+                                    ">
+                                    Show {{ category.categoryName }}
+                                </app-button-link>
+                            </div>
+                        </div>
                     }
-                </div>
-            </a>
-            @if (
-                category.nestedSubMenu && menuItem.classList.contains('hover')
-            ) {
-                <app-header-menu
-                    class="sub-menu"
-                    [menuItems]="category.nestedSubMenu"></app-header-menu>
-            }
-        </li>
-    }
-</ul>
+                }
+            </li>
+        }
+    </ul>
+}
