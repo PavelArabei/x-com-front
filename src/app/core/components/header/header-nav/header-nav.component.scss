@@ -1,27 +1,28 @@
-@import '../../../../../scss/abstracts/variables/colors';
-@import '../../../../../scss/abstracts/variables/margins';
+@use 'colors';
+@use 'margins';
+@use 'text-sizes';
 
 .list {
     margin: 0;
     display: flex;
-    gap: 1rem;
+    gap: margins.$m;
 }
 
 .divider {
     width: 1.5px;
-    background-color: $text;
+    background-color: colors.$text;
     transition: 0.3s linear;
-    margin: 10px auto;
+    margin: margins.$s auto;
     transform: translate(0, -0.4rem);
 }
 
 .sub-menu-wrapper {
-    padding-left: $m;
+    padding-left: margins.$m;
 }
 
 .small-text {
-    font-size: 16px;
-    color: $text-contrast;
+    font-size: text-sizes.$l;
+    color: colors.$text-contrast;
 }
 .title {
     margin: 0;
@@ -29,12 +30,12 @@
     line-height: 1rem;
 }
 .button-container {
-    margin: $s $m;
+    margin: margins.$s margins.$m;
 }
 .basket-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: $s;
-    margin: $m 0;
+    gap: margins.$s;
+    margin: margins.$m 0;
 }

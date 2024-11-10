@@ -1,16 +1,16 @@
-@import 'colors';
+@use 'colors';
 
 .menu-wrapper {
     min-width: 200px;
     transform: rotateX(-90deg);
-    background-color: $background-contrast;
+    background-color: colors.$background-contrast;
     overflow: hidden;
 
     position: absolute;
     top: 100%;
     left: 0;
 
-    border: 0.5px solid $primary;
+    border: 0.5px solid colors.$primary;
     border-bottom-left-radius: 0.5rem;
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;

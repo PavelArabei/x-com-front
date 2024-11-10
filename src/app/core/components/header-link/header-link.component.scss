@@ -1,5 +1,6 @@
-@import '../../../../scss/abstracts/mixins';
-@import '../../../../scss/abstracts/variables/colors';
+@use 'mixins';
+@use 'colors';
+@use 'margins';
 
 .link {
     position: relative;
@@ -12,8 +13,8 @@
     align-items: center;
     flex-direction: column;
     transition: 0.1s linear;
-    border-top-left-radius: 0.5rem;
-    border-top-right-radius: 0.5rem;
+    border-top-left-radius: margins.$s;
+    border-top-right-radius: margins.$s;
     padding: 0 10px;
     border: 1px solid transparent;
 
@@ -21,7 +22,7 @@
 
     &__svg {
         transition: 0.2s linear;
-        @include icon-size(2.5rem);
+        @include mixins.icon-size(2.5rem);
     }
     &__text {
         opacity: 0;
@@ -47,7 +48,7 @@
     min-width: 300px;
 
     transform: rotateX(90deg);
-    background-color: $background;
+    background-color: colors.$background;
     padding: 0 15px;
     position: absolute;
     top: 100%;
@@ -56,12 +57,12 @@
     border-bottom-right-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
     box-shadow:
-        -1px 1px 1px $primary,
-        2px -2px 1px $background;
+        -1px 1px 1px colors.$primary,
+        2px -2px 1px colors.$background;
 }
 
 .link:hover {
-    background-color: $background-secondary;
+    background-color: colors.$background-secondary;
 }
 
 .link:hover .main-menu {
@@ -70,7 +71,7 @@
 }
 
 .link:hover .icon {
-    border: 1px solid $primary;
+    border: 1px solid colors.$primary;
 }
 
 .link:hover .icon__svg {
@@ -84,6 +85,6 @@
     left: 1px;
     width: calc(100% - 2px);
     height: 2px;
-    background-color: $background-secondary;
+    background-color: colors.$background-secondary;
     z-index: 10;
 }

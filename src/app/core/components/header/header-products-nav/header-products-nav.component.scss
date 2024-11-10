@@ -1,13 +1,12 @@
-@import '../../../../../scss/abstracts/variables/colors';
+@use 'colors';
 
 :host {
     width: 100vw;
-    background-color: $background;
+    background-color: colors.$background;
 }
 
 .nav {
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
-    //height: 50px;
 }
