@@ -8,31 +8,31 @@ import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 
 @Component({
-    selector: 'app-header-link',
-    standalone: true,
-    imports: [
-        MatIcon,
-        TitleCasePipe,
-        AsyncPipe,
-        MenuWrapperComponent,
-        RouterLink,
-    ],
-    templateUrl: './header-link.component.html',
-    styleUrl: './header-link.component.scss',
+  selector: 'app-header-link',
+  standalone: true,
+  imports: [
+    MatIcon,
+    TitleCasePipe,
+    AsyncPipe,
+    MenuWrapperComponent,
+    RouterLink,
+  ],
+  templateUrl: './header-link.component.html',
+  styleUrl: './header-link.component.scss',
 })
 export class HeaderLinkComponent implements OnInit {
-    @Input({ required: true }) svgName: string | null = null;
-    @Input({ required: true }) svgText!: string;
-    @Input({ required: true }) link!: string;
-    @Input() width!: number;
-    @Input() height: number | null = null;
-    @Input() rightDirection: boolean = false;
+  @Input({ required: true }) svgName: string | null = null;
+  @Input({ required: true }) svgText!: string;
+  @Input({ required: true }) link!: string;
+  @Input() width!: number;
+  @Input() height: number | null = null;
+  @Input() rightDirection: boolean = false;
 
-    private _scrollService = inject(ScrollEmitterService);
-    isOnTop: Observable<boolean> | null = null;
-    isOnHover: boolean = false;
+  private _scrollService = inject(ScrollEmitterService);
+  isOnTop: Observable<boolean> | null = null;
+  isOnHover: boolean = false;
 
-    ngOnInit(): void {
-        this.isOnTop = this._scrollService.isOnTop$().pipe(shareReplay());
-    }
+  ngOnInit(): void {
+    this.isOnTop = this._scrollService.isOnTop$().pipe(shareReplay());
+  }
 }

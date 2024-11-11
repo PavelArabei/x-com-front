@@ -4,35 +4,35 @@
 @use 'text-sizes';
 
 :host {
-    width: 100%;
-    background-color: colors.$background;
+  width: 100%;
+  background-color: colors.$background;
 }
 .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__primary {
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    &__primary {
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: start;
-        gap: margins.$m;
-        margin-top: margins.$l;
-    }
+    justify-content: space-around;
+    align-items: start;
+    gap: margins.$m;
+    margin-top: margins.$l;
+  }
 }
 
 .icon {
-    transform: translateY(-0.25rem);
-    transition: 0.3s;
-    @include mixins.icon-size(text-sizes.$xxxl);
-    cursor: pointer;
-    margin-right: margins.$xl;
+  transform: translateY(-0.25rem);
+  transition: 0.3s;
+  @include mixins.icon-size(text-sizes.$xxxl);
+  cursor: pointer;
+  margin-right: margins.$xl;
 }
 .main-search {
-    flex-grow: 1;
+  flex-grow: 1;
 }
 
 .on-top {
-    transform: rotate(180deg) translate(-0rem, 0.2rem);
-    scale: (1.5);
+  transform: rotate(180deg) translate(-0rem, 0.2rem);
+  scale: (1.5);
 }

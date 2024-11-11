@@ -1,12 +1,12 @@
 @use 'colors';
 
 :host {
-    width: 100vw;
-    background-color: colors.$background;
+  width: 100vw;
+  background-color: colors.$background;
 }
 
 .nav {
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
 }

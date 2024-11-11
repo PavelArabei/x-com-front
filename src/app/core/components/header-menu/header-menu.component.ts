@@ -7,24 +7,24 @@ import { SubMenuLinkContent } from '@core/types/sub-menu-link-content.interface'
 import { ButtonLinkComponent } from '@shared/components/button-link/button-link.component';
 
 @Component({
-    selector: 'app-header-menu',
-    standalone: true,
-    imports: [MatIcon, RouterLink, NgClass, ButtonLinkComponent],
-    templateUrl: './header-menu.component.html',
-    styleUrl: './header-menu.component.scss',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: 'app-header-menu',
+  standalone: true,
+  imports: [MatIcon, RouterLink, NgClass, ButtonLinkComponent],
+  templateUrl: './header-menu.component.html',
+  styleUrl: './header-menu.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderMenuComponent {
-    protected subCategoryRouterPath = AppRoutes.SUBCATEGORY;
+  protected subCategoryRouterPath = AppRoutes.SUBCATEGORY;
 
-    @Input() menuItems: SubMenuLinkContent[] | null = null;
-    @Input({ required: true }) title!: string;
-    @Input() nestingLevel: number = 0;
-    @Input() additionalRoutePath: string | null = null;
+  @Input() menuItems: SubMenuLinkContent[] | null = null;
+  @Input({ required: true }) title!: string;
+  @Input() nestingLevel: number = 0;
+  @Input() additionalRoutePath: string | null = null;
 
-    getRouterLink(route: string): string {
-        return this.additionalRoutePath
-            ? `/${this.additionalRoutePath}/${route}`
-            : `/${route}`;
-    }
+  getRouterLink(route: string): string {
+    return this.additionalRoutePath
+      ? `/${this.additionalRoutePath}/${route}`
+      : `/${route}`;
+  }
 }

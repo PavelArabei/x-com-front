@@ -12,29 +12,29 @@ import { Observable } from 'rxjs';
 import { shareReplay } from 'rxjs/operators';
 
 @Component({
-    selector: 'app-header',
-    standalone: true,
-    imports: [
-        MatIcon,
-        AsyncPipe,
-        MatButtonModule,
-        MatIconModule,
-        MatToolbarModule,
-        MainSearchComponent,
-        HeaderNavComponent,
-        HeaderProductsNavComponent,
-    ],
-    templateUrl: './header.component.html',
-    styleUrl: './header.component.scss',
+  selector: 'app-header',
+  standalone: true,
+  imports: [
+    MatIcon,
+    AsyncPipe,
+    MatButtonModule,
+    MatIconModule,
+    MatToolbarModule,
+    MainSearchComponent,
+    HeaderNavComponent,
+    HeaderProductsNavComponent,
+  ],
+  templateUrl: './header.component.html',
+  styleUrl: './header.component.scss',
 })
 export class HeaderComponent implements OnInit {
-    @Input() drawer!: MatSidenav;
-    @Input() isHandset$!: Observable<boolean>;
+  @Input() drawer!: MatSidenav;
+  @Input() isHandset$!: Observable<boolean>;
 
-    private _scrollService = inject(ScrollEmitterService);
-    isOnTop: Observable<boolean> | null = null;
+  private _scrollService = inject(ScrollEmitterService);
+  isOnTop: Observable<boolean> | null = null;
 
-    ngOnInit(): void {
-        this.isOnTop = this._scrollService.isOnTop$().pipe(shareReplay());
-    }
+  ngOnInit(): void {
+    this.isOnTop = this._scrollService.isOnTop$().pipe(shareReplay());
+  }
 }

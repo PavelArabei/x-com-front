@@ -6,9 +6,9 @@ import { provideRouter } from '@angular/router';
 import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
-    providers: [
-        provideHttpClient(),
-        provideRouter(routes),
-        provideAnimationsAsync(),
-    ],
+  providers: [
+    provideHttpClient(),
+    provideRouter(routes),
+    provideAnimationsAsync(),
+  ],
 };

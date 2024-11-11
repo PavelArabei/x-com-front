@@ -1,0 +1,37 @@
+@import '../../../../scss/abstracts/variables/colors';
+@import '../../../../scss/abstracts/variables/margins';
+
+.button {
+  transition: 0.2s;
+  border: 1px solid $primary;
+  width: 100%;
+  border-radius: 0.5rem;
+  color: $text;
+  padding: $xs $m;
+  &:hover {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: $primary;
+  }
+}
+
+.secondary {
+  border: 1px solid $secondary;
+  &:hover {
+    background-color: $secondary;
+  }
+}
+
+.error {
+  border: 1px solid $error;
+  &:hover {
+    background-color: $error;
+  }
+}
+
+.text {
+  border: 1px solid $text;
+  &:hover {
+    background-color: $text;
+  }
+}

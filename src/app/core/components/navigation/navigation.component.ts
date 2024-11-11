@@ -14,29 +14,29 @@ import { map, shareReplay } from 'rxjs/operators';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
-    selector: 'app-navigation',
-    templateUrl: './navigation.component.html',
-    styleUrl: './navigation.component.scss',
-    standalone: true,
-    imports: [
-        MatToolbarModule,
-        MatButtonModule,
-        MatSidenavModule,
-        MatListModule,
-        MatIconModule,
-        AsyncPipe,
-        RouterOutlet,
-        HeaderComponent,
-        ButtonComponent,
-    ],
+  selector: 'app-navigation',
+  templateUrl: './navigation.component.html',
+  styleUrl: './navigation.component.scss',
+  standalone: true,
+  imports: [
+    MatToolbarModule,
+    MatButtonModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
+    AsyncPipe,
+    RouterOutlet,
+    HeaderComponent,
+    ButtonComponent,
+  ],
 })
 export class NavigationComponent {
-    private breakpointObserver = inject(BreakpointObserver);
+  private breakpointObserver = inject(BreakpointObserver);
 
-    isHandset$: Observable<boolean> = this.breakpointObserver
-        .observe(Breakpoints.HandsetLandscape)
-        .pipe(
-            map((result) => result.matches),
-            shareReplay()
-        );
+  isHandset$: Observable<boolean> = this.breakpointObserver
+    .observe(Breakpoints.HandsetLandscape)
+    .pipe(
+      map((result) => result.matches),
+      shareReplay()
+    );
 }

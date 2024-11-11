@@ -1,20 +1,20 @@
 @use 'colors';
 
 ::-webkit-scrollbar {
-    width: 10px;
+  width: 10px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: colors.$background-contrast;
+  background: colors.$background-contrast;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: colors.$primary;
+  background: colors.$primary;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: colors.$background-secondary;
+  background: colors.$background-secondary;
 }

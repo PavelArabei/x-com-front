@@ -5,80 +5,80 @@
 $width: 350px;
 
 :host {
-    width: $width;
+  width: $width;
 }
 
 .title-wrapper {
-    margin: margins.$s 0 margins.$s 0;
-    padding: 0 margins.$s;
+  margin: margins.$s 0 margins.$s 0;
+  padding: 0 margins.$s;
 
-    &__title {
-        color: colors.$text-contrast;
-        font-weight: bold;
-    }
+  &__title {
+    color: colors.$text-contrast;
+    font-weight: bold;
+  }
 }
 
 .icon {
-    padding: 0 margins.$s;
-    cursor: pointer;
-    color: colors.$text;
-    width: $width;
+  padding: 0 margins.$s;
+  cursor: pointer;
+  color: colors.$text;
+  width: $width;
 
-    &__link {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0;
-    }
-    &__link-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: margins.$s 0;
-        gap: margins.$s;
-    }
-    &__svg {
-        @include mixins.icon-size(1.5rem);
-    }
-
-    &__arrow-wrapper {
-        height: auto;
-        display: flex;
-        align-items: center;
-    }
-
-    &__arrow {
-        @include mixins.icon-size(1.5rem);
-    }
-}
-
-.hover {
+  &:hover {
     background-color: colors.$background;
     color: colors.$primary;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  &__link-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: margins.$s 0;
+    gap: margins.$s;
+  }
+  &__svg {
+    @include mixins.icon-size(1.5rem);
+  }
+
+  &__arrow-wrapper {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  &__arrow {
+    @include mixins.icon-size(1.5rem);
+  }
 }
 
 .sub-menu {
-    position: absolute;
-    left: 50%;
-    top: 0;
+  position: absolute;
+  left: 50%;
+  top: 0;
 }
 
 .last-menu {
-    display: flex;
-    gap: margins.$s;
-    width: $width;
-    flex-direction: column;
-    height: $width * 2;
-    cursor: auto;
+  display: flex;
+  gap: margins.$s;
+  width: $width;
+  flex-direction: column;
+  height: $width * 2;
+  cursor: auto;
 
-    margin: margins.$s 0 margins.$s 0;
-    padding: 0 margins.$s;
+  margin: margins.$s 0 margins.$s 0;
+  padding: 0 margins.$s;
 
-    &__title {
-        color: colors.$text-contrast;
-        font-weight: bold;
-    }
-    &__button {
-        color: colors.$text;
-    }
+  &__title {
+    color: colors.$text-contrast;
+    font-weight: bold;
+  }
+  &__button {
+    color: colors.$text;
+  }
 }

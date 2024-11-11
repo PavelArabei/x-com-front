@@ -3,41 +3,41 @@
 @use 'text-sizes';
 
 .search {
-    width: 100%;
-    display: flex;
-    height: 2.5rem;
-    border-radius: 0.5rem;
-    background-color: colors.$background-secondary;
+  width: 100%;
+  display: flex;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  background-color: colors.$background-secondary;
+  color: colors.$text;
+
+  &__input {
+    font-size: 1.5rem;
+    flex-grow: 1;
+    background-color: transparent;
     color: colors.$text;
+    margin: 0 10px;
+  }
 
-    &__input {
-        font-size: 1.5rem;
-        flex-grow: 1;
-        background-color: transparent;
-        color: colors.$text;
-        margin: 0 10px;
+  &__button {
+    display: flex;
+    background-color: colors.$text-contrast;
+    color: colors.$background;
+    padding: 0 1.5rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: colors.$text;
+      color: colors.$background-contrast;
+      .search__icon {
+        transform: scale(1.1);
+      }
     }
+  }
 
-    &__button {
-        display: flex;
-        background-color: colors.$text-contrast;
-        color: colors.$background;
-        padding: 0 1.5rem;
-        border-radius: 0.5rem;
-        align-items: center;
-        transition: 0.3s;
-
-        &:hover {
-            background-color: colors.$text;
-            color: colors.$background-contrast;
-            .search__icon {
-                transform: scale(1.1);
-            }
-        }
-    }
-
-    &__icon {
-        @include mixins.icon-size(text-sizes.$l);
-        transition: 0.3s;
-    }
+  &__icon {
+    @include mixins.icon-size(text-sizes.$l);
+    transition: 0.3s;
+  }
 }

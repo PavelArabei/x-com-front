@@ -1,4 +1,4 @@
 export interface IconType {
-    iconName: string;
-    icon: string;
+  iconName: string;
+  icon: string;
 }

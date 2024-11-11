@@ -4,17 +4,17 @@ import { NavigationComponent } from '@core/components/navigation/navigation.comp
 import { IconRegisterService } from '@core/services/icon-register.service';
 
 @Component({
-    selector: 'app-root',
-    standalone: true,
-    imports: [RouterOutlet, NavigationComponent],
-    templateUrl: './app.component.html',
-    styleUrl: './app.component.scss',
+  selector: 'app-root',
+  standalone: true,
+  imports: [RouterOutlet, NavigationComponent],
+  templateUrl: './app.component.html',
+  styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-    private readonly iconRegisterService: IconRegisterService =
-        inject(IconRegisterService);
+  private readonly iconRegisterService: IconRegisterService =
+    inject(IconRegisterService);
 
-    public ngOnInit(): void {
-        this.iconRegisterService.registerIcons();
-    }
+  public ngOnInit(): void {
+    this.iconRegisterService.registerIcons();
+  }
 }

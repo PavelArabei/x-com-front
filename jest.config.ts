@@ -6,13 +6,13 @@
 import type { Config } from 'jest';
 
 const config: Config = {
-    clearMocks: true,
-    collectCoverage: true,
-    preset: 'jest-preset-angular',
-    setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
-    coverageDirectory: 'coverage',
-    coverageProvider: 'v8',
-    testEnvironment: 'jsdom',
+  clearMocks: true,
+  collectCoverage: true,
+  preset: 'jest-preset-angular',
+  setupFilesAfterEnv: ['<rootDir>/setup-jest.ts'],
+  coverageDirectory: 'coverage',
+  coverageProvider: 'v8',
+  testEnvironment: 'jsdom',
 };
 
 export default config;

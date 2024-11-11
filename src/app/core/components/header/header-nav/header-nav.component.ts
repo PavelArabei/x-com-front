@@ -9,37 +9,37 @@ import { MenuWrapperComponent } from '@core/components/menu-wrapper/menu-wrapper
 import { ButtonLinkComponent } from '@shared/components/button-link/button-link.component';
 
 @Component({
-    selector: 'app-header-nav',
-    standalone: true,
-    imports: [
-        HeaderMenuComponent,
-        AsyncPipe,
-        MenuWrapperComponent,
-        HeaderMenuComponent,
-        MatDivider,
-        RouterLink,
-        HeaderLinkComponent,
-        ButtonLinkComponent,
-    ],
-    templateUrl: './header-nav.component.html',
-    styleUrl: './header-nav.component.scss',
+  selector: 'app-header-nav',
+  standalone: true,
+  imports: [
+    HeaderMenuComponent,
+    AsyncPipe,
+    MenuWrapperComponent,
+    HeaderMenuComponent,
+    MatDivider,
+    RouterLink,
+    HeaderLinkComponent,
+    ButtonLinkComponent,
+  ],
+  templateUrl: './header-nav.component.html',
+  styleUrl: './header-nav.component.scss',
 })
 export class HeaderNavComponent {
-    navInfo = headerCategoryNames;
-    protected readonly categoryNames = headerCategoryNames;
+  navInfo = headerCategoryNames;
+  protected readonly categoryNames = headerCategoryNames;
 
-    get account() {
-        return this.navInfo.account;
-    }
+  get account() {
+    return this.navInfo.account;
+  }
 
-    get help() {
-        return this.navInfo.help;
-    }
-    get list() {
-        return this.navInfo.lists;
-    }
+  get help() {
+    return this.navInfo.help;
+  }
+  get list() {
+    return this.navInfo.lists;
+  }
 
-    get basket() {
-        return this.navInfo.basket;
-    }
+  get basket() {
+    return this.navInfo.basket;
+  }
 }

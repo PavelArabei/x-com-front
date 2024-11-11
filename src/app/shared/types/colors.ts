@@ -1,6 +1,6 @@
 export type MainColors =
-    | 'primary'
-    | 'secondary'
-    | 'error'
-    | 'text'
-    | 'background';
+  | 'primary'
+  | 'secondary'
+  | 'error'
+  | 'text'
+  | 'background';

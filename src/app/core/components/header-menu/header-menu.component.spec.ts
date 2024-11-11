@@ -3,21 +3,21 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderMenuComponent } from '@core/components/header-menu/header-menu.component';
 
 describe('MenuLinkComponent', () => {
-    let component: HeaderMenuComponent;
-    let fixture: ComponentFixture<HeaderMenuComponent>;
+  let component: HeaderMenuComponent;
+  let fixture: ComponentFixture<HeaderMenuComponent>;
 
-    beforeEach(async () => {
-        await TestBed.configureTestingModule({
-            imports: [HeaderMenuComponent],
-            schemas: [CUSTOM_ELEMENTS_SCHEMA],
-        }).compileComponents();
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      imports: [HeaderMenuComponent],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA],
+    }).compileComponents();
 
-        fixture = TestBed.createComponent(HeaderMenuComponent);
-        component = fixture.componentInstance;
-        fixture.detectChanges();
-    });
+    fixture = TestBed.createComponent(HeaderMenuComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
 
-    it('should create', () => {
-        expect(component).toBeTruthy();
-    });
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
 });

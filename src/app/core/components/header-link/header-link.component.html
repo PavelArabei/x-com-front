@@ -1,21 +1,21 @@
 <li
-    class="link"
-    (mouseenter)="isOnHover = true"
-    (mouseleave)="isOnHover = false">
-    <a class="icon" [routerLink]="link">
-        @if (svgName) {
-            <mat-icon class="icon__svg" [svgIcon]="svgName"></mat-icon>
-        }
-        <p [class.textOnTop]="isOnTop | async" class="icon__text">
-            {{ svgText | titlecase }}
-        </p>
-    </a>
-    <app-menu-wrapper
-        class="flex-colum"
-        [width]="width || 250"
-        [isOnHover]="isOnHover"
-        [height]="height || 'auto'"
-        [rightDirection]="rightDirection">
-        <ng-content></ng-content>
-    </app-menu-wrapper>
+  class="link"
+  (mouseenter)="isOnHover = true"
+  (mouseleave)="isOnHover = false">
+  <a class="icon" [routerLink]="link">
+    @if (svgName) {
+      <mat-icon class="icon__svg" [svgIcon]="svgName"></mat-icon>
+    }
+    <p [class.textOnTop]="isOnTop | async" class="icon__text">
+      {{ svgText | titlecase }}
+    </p>
+  </a>
+  <app-menu-wrapper
+    class="flex-colum"
+    [width]="width || 250"
+    [isOnHover]="isOnHover"
+    [height]="height || 'auto'"
+    [rightDirection]="rightDirection">
+    <ng-content></ng-content>
+  </app-menu-wrapper>
 </li>
