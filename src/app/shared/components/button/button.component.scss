@@ -1,37 +1,38 @@
-@import '../../../../scss/abstracts/variables/colors';
-@import '../../../../scss/abstracts/variables/margins';
+@use 'colors';
+@use 'margins';
 
 .button {
   transition: 0.2s;
-  border: 1px solid $primary;
+  border: 1px solid colors.$primary;
   width: 100%;
   border-radius: 0.5rem;
-  color: $text;
-  padding: $xs $m;
+  color: colors.$text;
+  padding: margins.$xs margins.$m;
+
   &:hover {
-    font-size: 1.1rem;
+    transform: scale(1.05);
     font-weight: bold;
-    background-color: $primary;
+    background-color: colors.$primary;
   }
 }
 
 .secondary {
-  border: 1px solid $secondary;
+  border: 1px solid colors.$secondary;
   &:hover {
-    background-color: $secondary;
+    background-color: colors.$secondary;
   }
 }
 
 .error {
-  border: 1px solid $error;
+  border: 1px solid colors.$error;
   &:hover {
-    background-color: $error;
+    background-color: colors.$error;
   }
 }
 
 .text {
-  border: 1px solid $text;
+  border: 1px solid colors.$text;
   &:hover {
-    background-color: $text;
+    background-color: colors.$text;
   }
 }
