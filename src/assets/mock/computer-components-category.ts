@@ -308,57 +308,51 @@ const computerCooling: SubMenuLinkContent[] = [
 
 export const computerComponents: SubMenuLinkContent[] = [
   {
-    categoryName: 'Recommended computer sets',
-    categoryRoutePath: '/recommended-computer-sets',
-    categoryIcon: null,
-    nestedSubMenu: null,
-  },
-  {
     categoryName: 'HDD and SSD hard drives',
     categoryRoutePath: '/hdd-and-ssd-hard-drives',
-    categoryIcon: null,
+    categoryIcon: 'hdd',
     nestedSubMenu: hddAndSsdDrives,
   },
   {
     categoryName: 'Graphics cards',
     categoryRoutePath: '/graphics-cards',
-    categoryIcon: null,
+    categoryIcon: 'gpu',
     nestedSubMenu: graphicsCards,
   },
   {
     categoryName: 'Processors',
     categoryRoutePath: '/processors',
-    categoryIcon: null,
+    categoryIcon: 'cpu',
     nestedSubMenu: processors,
   },
   {
     categoryName: 'Motherboards',
     categoryRoutePath: '/motherboards',
-    categoryIcon: null,
+    categoryIcon: 'motherboard',
     nestedSubMenu: motherboards,
   },
   {
     categoryName: 'Computer cases',
     categoryRoutePath: '/computer-cases',
-    categoryIcon: null,
+    categoryIcon: 'computer-case',
     nestedSubMenu: computerCases,
   },
   {
     categoryName: 'RAM',
     categoryRoutePath: '/ram',
-    categoryIcon: null,
+    categoryIcon: 'ram',
     nestedSubMenu: ram,
   },
   {
     categoryName: 'Computer power supplies',
     categoryRoutePath: '/computer-power-supplies',
-    categoryIcon: null,
+    categoryIcon: 'computer-power-supplies',
     nestedSubMenu: computerPowerSupplies,
   },
   {
     categoryName: 'Computer cooling',
     categoryRoutePath: '/computer-cooling',
-    categoryIcon: null,
+    categoryIcon: 'cooler',
     nestedSubMenu: computerCooling,
   },
 ];
