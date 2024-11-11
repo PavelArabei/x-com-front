@@ -344,13 +344,13 @@ export const computerComponents: SubMenuLinkContent[] = [
     nestedSubMenu: ram,
   },
   {
-    categoryName: 'Computer power supplies',
+    categoryName: 'Power supplies',
     categoryRoutePath: '/computer-power-supplies',
     categoryIcon: 'computer-power-supplies',
     nestedSubMenu: computerPowerSupplies,
   },
   {
-    categoryName: 'Computer cooling',
+    categoryName: 'Cooling',
     categoryRoutePath: '/computer-cooling',
     categoryIcon: 'cooler',
     nestedSubMenu: computerCooling,
