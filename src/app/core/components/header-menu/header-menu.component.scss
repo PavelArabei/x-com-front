@@ -2,10 +2,8 @@
 @use 'margins';
 @use 'colors';
 
-$width: 350px;
-
 :host {
-  width: $width;
+  width: 100%;
 }
 
 .title-wrapper {
@@ -22,7 +20,7 @@ $width: 350px;
   padding: 0 margins.$s;
   cursor: pointer;
   color: colors.$text;
-  width: $width;
+  width: 100%;
 
   &:hover {
     background-color: colors.$background;
@@ -54,31 +52,5 @@ $width: 350px;
 
   &__arrow {
     @include mixins.icon-size(1.5rem);
-  }
-}
-
-.sub-menu {
-  position: absolute;
-  left: 50%;
-  top: 0;
-}
-
-.last-menu {
-  display: flex;
-  gap: margins.$s;
-  width: $width;
-  flex-direction: column;
-  height: $width * 2;
-  cursor: auto;
-
-  margin: margins.$s 0 margins.$s 0;
-  padding: 0 margins.$s;
-
-  &__title {
-    color: colors.$text-contrast;
-    font-weight: bold;
-  }
-  &__button {
-    color: colors.$text;
   }
 }

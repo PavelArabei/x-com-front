@@ -7,15 +7,13 @@
   ) {
     <app-header-link
       #category
-      [link]="product.categoryRoutePath"
+      [link]="getCategoryRoute(product.categoryRoutePath)"
       [svgName]="product.categoryIcon"
       [svgText]="product.categoryName"
-      [rightDirection]="i > count / 2"
-      [width]="700">
+      [rightDirection]="i > count / 2">
       @if (product.nestedSubMenu && category.isOnHover) {
         <app-header-menu
-          [additionalRoutePath]="routerPath"
-          [nestingLevel]="1"
+          [additionalRoutePath]="subcategoryRoute"
           [menuItems]="product.nestedSubMenu"
           [title]="product.categoryName"></app-header-menu>
       }
