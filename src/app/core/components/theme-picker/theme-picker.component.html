@@ -1,0 +1,19 @@
+<button
+  [matMenuTriggerFor]="menu"
+  class="button"
+  mat-fab
+  extended
+  color="tirtiary">
+  <mat-icon
+    class="icon"
+    [svgIcon]="(svgName$ | async)?.name || 'dark-theme'"></mat-icon>
+  Theme
+</button>
+<mat-menu #menu="matMenu">
+  @for (theme of getThemesList(); track theme.name) {
+    <button (click)="changeTheme(theme)" class="item-menu" mat-menu-item>
+      <mat-icon class="item-menu__icon" [svgIcon]="theme.name"></mat-icon>
+      <span class="item-menu__text">{{ theme.type | titlecase }}</span>
+    </button>
+  }
+</mat-menu>
