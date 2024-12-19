@@ -1,38 +1,37 @@
-@use 'colors';
 @use 'margins';
 
 .button {
   transition: 0.2s;
-  border: 1px solid colors.$primary;
+  border: 1px solid var(--primary);
   width: 100%;
   border-radius: 0.5rem;
-  color: colors.$text;
+  color: var(--text);
   padding: margins.$xs margins.$m;
 
   &:hover {
     transform: scale(1.05);
     font-weight: bold;
-    background-color: colors.$primary;
+    background-color: var(--primary);
   }
 }
 
 .secondary {
-  border: 1px solid colors.$secondary;
+  border: 1px solid var(--secondary);
   &:hover {
-    background-color: colors.$secondary;
+    background-color: var(--secondary);
   }
 }
 
 .error {
-  border: 1px solid colors.$error;
+  border: 1px solid var(--error);
   &:hover {
-    background-color: colors.$error;
+    background-color: var(--error);
   }
 }
 
 .text {
-  border: 1px solid colors.$text;
+  border: 1px solid var(--text);
   &:hover {
-    background-color: colors.$text;
+    background-color: var(--text);
   }
 }

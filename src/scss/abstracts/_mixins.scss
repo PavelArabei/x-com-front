@@ -1,5 +1,20 @@
+@use '@angular/material' as mat;
+
 @mixin icon-size($size) {
   font-size: $size;
   height: $size;
   width: $size;
+}
+
+@mixin generate-theme-variables($theme) {
+  --primary: #{mat.get-theme-color($theme, primary, 50)};
+  --primary-contrast: #{mat.get-theme-color($theme, secondary, 40)};
+  --secondary: #{mat.get-theme-color($theme, tertiary, 40)};
+  --secondary-contrast: #{mat.get-theme-color($theme, tertiary, 20)};
+  --error: #{mat.get-theme-color($theme, error, 50)};
+  --text: #{mat.get-theme-color($theme, neutral, 80)};
+  --text-contrast: #{mat.get-theme-color($theme, neutral, 60)};
+  --background: #{mat.get-theme-color($theme, neutral, 4)};
+  --background-contrast: #{mat.get-theme-color($theme, neutral, 6)};
+  --background-secondary: #{mat.get-theme-color($theme, neutral, 6)};
 }

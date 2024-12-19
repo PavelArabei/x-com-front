@@ -1,12 +1,60 @@
+@use 'mixins';
+@use 'themes' as themes;
+@use '@angular/material' as mat;
+@include mat.core;
+
+:root {
+  --primary: #{mat.get-theme-color(themes.$dark-theme, primary, 50)};
+  --primary-contrast: #{mat.get-theme-color(themes.$dark-theme, primary, 30)};
+  --secondary: #{mat.get-theme-color(themes.$dark-theme, tertiary, 40)};
+  --secondary-contrast: #{mat.get-theme-color(themes.$dark-theme, tertiary, 20)};
+  --error: #{mat.get-theme-color(themes.$dark-theme, error, 50)};
+  --text: #{mat.get-theme-color(themes.$dark-theme, neutral, 80)};
+  --text-contrast: #{mat.get-theme-color(themes.$dark-theme, neutral, 60)};
+  --background: #{mat.get-theme-color(themes.$dark-theme, neutral, 6)};
+  --background-contrast: #{mat.get-theme-color(themes.$dark-theme, neutral, 4)};
+  --background-secondary: #{mat.get-theme-color(themes.$dark-theme, neutral, 6)};
+
+  @include mat.all-component-themes(themes.$dark-theme);
+}
+
+.light-theme {
+  --primary: #{mat.get-theme-color(themes.$light-theme, primary, 50)};
+  --primary-contrast: #{mat.get-theme-color(themes.$light-theme, primary, 70)};
+  --secondary: #{mat.get-theme-color(themes.$light-theme, tertiary, 40)};
+  --secondary-contrast: #{mat.get-theme-color(themes.$light-theme, tertiary, 20)};
+  --error: #{mat.get-theme-color(themes.$light-theme, error, 50)};
+  --text: #{mat.get-theme-color(themes.$light-theme, neutral, 20)};
+  --text-contrast: #{mat.get-theme-color(themes.$light-theme, neutral, 10)};
+  --background: #{mat.get-theme-color(themes.$light-theme, primary, 90)};
+  --background-contrast: #{mat.get-theme-color(themes.$light-theme, primary, 98)};
+  --background-secondary: #{mat.get-theme-color(
+      themes.$light-theme,
+      neutral,
+      80
+    )};
+
+  @include mat.all-component-colors(themes.$light-theme);
+}
+
 html,
 body {
+  background-color: var(--background);
   box-sizing: border-box;
+  color: var(--text);
+  font-family: mat.get-theme-typography(
+    themes.$dark-theme,
+    display-medium,
+    'font-family'
+  );
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 .container {
-  max-width: 1480px;
+  max-width: 1440px;
 }
