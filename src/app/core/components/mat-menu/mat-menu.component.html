@@ -1,0 +1,33 @@
+<button
+  [matMenuTriggerFor]="menu"
+  class="button"
+  mat-fab
+  extended
+  color="tirtiary">
+  <mat-icon class="icon" [svgIcon]="info().categoryIcon || ''"></mat-icon>
+  {{ info().categoryName }}
+</button>
+
+<mat-menu #menu="matMenu">
+  <div class="content">
+    <ng-content select="header-menu-content"></ng-content>
+  </div>
+
+  @for (item of info().nestedSubMenu; track item.categoryName) {
+    <a class="item-menu" mat-menu-item [routerLink]="item.categoryRoutePath">
+      @if (item.categoryIcon) {
+        <mat-icon
+          class="item-menu__icon"
+          [svgIcon]="item.categoryIcon"></mat-icon>
+      }
+      <span class="item-menu__text">{{ item.categoryName }}</span>
+
+      @if (item.nestedSubMenu) {
+        <mat-icon [svgIcon]="'arrow-right'"></mat-icon>
+      }
+    </a>
+  }
+  <div class="content">
+    <ng-content select="footer-menu-content"></ng-content>
+  </div>
+</mat-menu>
