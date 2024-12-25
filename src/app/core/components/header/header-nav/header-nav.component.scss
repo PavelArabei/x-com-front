@@ -1,41 +1,7 @@
-@use 'colors';
 @use 'margins';
 @use 'text-sizes';
 
 .list {
-  margin: 0;
   display: flex;
   gap: margins.$m;
-}
-
-.divider {
-  width: 1.5px;
-  background-color: colors.$text;
-  transition: 0.3s linear;
-  margin: margins.$s auto;
-  transform: translate(0, -0.4rem);
-}
-
-.sub-menu-wrapper {
-  padding-left: margins.$m;
-}
-
-.small-text {
-  font-size: text-sizes.$s;
-  color: colors.$text-contrast;
-}
-.title {
-  margin: 0;
-  padding: 0;
-  line-height: 1rem;
-}
-.button-container {
-  margin: margins.$s margins.$m;
-}
-.basket-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: margins.$s;
-  margin: margins.$m 0;
 }

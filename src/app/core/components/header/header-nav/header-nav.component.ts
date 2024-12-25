@@ -1,42 +1,32 @@
-import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatDivider } from '@angular/material/divider';
-import { RouterLink } from '@angular/router';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { headerCategoryNames } from '@assets/mock/category-names';
-import { HeaderLinkComponent } from '@core/components/header-link/header-link.component';
-import { HeaderMenuComponent } from '@core/components/header-menu/header-menu.component';
-import { MenuWrapperComponent } from '@core/components/menu-wrapper/menu-wrapper.component';
-import { ButtonLinkComponent } from '@shared/components/button-link/button-link.component';
+import { MatMenuComponent } from '@core/components/mat-menu/mat-menu.component';
+import { ThemePickerComponent } from '@core/components/theme-picker/theme-picker.component';
 
 @Component({
   selector: 'app-header-nav',
   standalone: true,
   imports: [
-    HeaderMenuComponent,
-    AsyncPipe,
-    MenuWrapperComponent,
-    HeaderMenuComponent,
     MatDivider,
-    RouterLink,
-    HeaderLinkComponent,
-    ButtonLinkComponent,
+    MatIconModule,
+    MatButtonModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatIconModule,
+    MatMenuComponent,
+    ThemePickerComponent,
   ],
   templateUrl: './header-nav.component.html',
   styleUrl: './header-nav.component.scss',
 })
 export class HeaderNavComponent {
-  navInfo = headerCategoryNames;
-  protected readonly categoryNames = headerCategoryNames;
-
+  protected readonly navInfo = headerCategoryNames;
   get account() {
     return this.navInfo.account;
-  }
-
-  get help() {
-    return this.navInfo.help;
-  }
-  get list() {
-    return this.navInfo.lists;
   }
 
   get basket() {
