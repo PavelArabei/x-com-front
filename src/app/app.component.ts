@@ -1,12 +1,11 @@
 import { Component, inject, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from '@core/components/navigation/navigation.component';
 import { IconRegisterService } from '@core/services/icon-register.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent],
+  imports: [NavigationComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
