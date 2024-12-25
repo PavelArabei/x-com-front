@@ -1,22 +1,35 @@
 <header class="header">
-  <div class="header__primary">
-    @if (isHandset$ | async) {
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-    }
+  <div class="header__content">
+    <div
+      [ngClass]="{
+        'header__logo-container--show-menu': shouldShowMenu$ | async,
+      }"
+      class="header__logo-container">
+      @if (shouldShowMenu$ | async) {
+        <button
+          [@toggle]
+          type="button"
+          aria-label="Toggle sidenav"
+          mat-icon-button
+          class="header__menu-button"
+          [ngClass]="{
+            'header__menu-button--show-menu': shouldShowMenu$ | async,
+          }"
+          (click)="drawer.toggle()">
+          <mat-icon class="header__menu-icon" aria-label="Side nav toggle icon"
+            >menu</mat-icon
+          >
+        </button>
+      }
+      <mat-icon
+        color="accent"
+        class="header__icon"
+        [class.on-top]="isOnTop$ | async"
+        [svgIcon]="'main-logo'"
+        aria-label="Main page logo"></mat-icon>
+    </div>
 
-    <mat-icon
-      color="accent"
-      class="icon"
-      [class.on-top]="isOnTop | async"
-      [svgIcon]="'main-logo'"
-      aria-label="Main page logo"></mat-icon>
-    <app-main-search class="main-search"></app-main-search>
+    <app-main-search class="header__search"></app-main-search>
     <app-header-nav></app-header-nav>
   </div>
   <app-header-products-nav></app-header-products-nav>

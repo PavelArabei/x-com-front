@@ -1,38 +1,71 @@
 @use 'mixins';
-@use 'colors';
 @use 'margins';
 @use 'text-sizes';
 
 :host {
   width: 100%;
-  background-color: colors.$background;
 }
+
 .header {
+  $icon-size: 3.5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
-  &__primary {
+  gap: margins.$m;
+  margin-top: margins.$l;
+
+  &__content {
     width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: start;
     gap: margins.$m;
-    margin-top: margins.$l;
+  }
+
+  &__logo-container {
+    display: flex;
+    align-items: center;
+    width: $icon-size;
+    overflow: visible;
+    transition: 0.3s;
+  }
+
+  &__logo-container--show-menu {
+    width: calc($icon-size * 2);
+  }
+
+  &__menu-button {
+    @include mixins.icon-size($icon-size);
+    width: 0;
+    height: 0;
+  }
+
+  &__menu-button--show-menu {
+    width: $icon-size;
+    height: $icon-size;
+    overflow: hidden;
+  }
+
+  &__menu-icon {
+    @include mixins.icon-size(2.7rem);
+  }
+
+  &__icon {
+    transition: 0.3s;
+    color: var(--primary);
+
+    @include mixins.icon-size($icon-size);
+    cursor: pointer;
+    width: $icon-size;
+    height: $icon-size;
+  }
+
+  &__search {
+    flex-grow: 1;
   }
 }
 
-.icon {
-  transform: translateY(-0.25rem);
-  transition: 0.3s;
-  @include mixins.icon-size(text-sizes.$xxxl);
-  cursor: pointer;
-  margin-right: margins.$xl;
-}
-.main-search {
-  flex-grow: 1;
-}
-
 .on-top {
-  transform: rotate(180deg) translate(-0rem, 0.2rem);
-  scale: (1.5);
+  transform: rotate(180deg);
 }
