@@ -30,7 +30,8 @@
       "@icons/*": ["./src/assets/icons/*"],
       "@home/*": ["./src/app/home/*"],
       "@category/*": ["./src/app/category/*"],
-      "@sub-category/*": ["./src/app/sub-category/*"]
+      "@sub-category/*": ["./src/app/sub-category/*"],
+      "@animations/*": ["./src/app/shared/animations/*"]
     }
   },
   "angularCompilerOptions": {
