@@ -103,7 +103,7 @@ export const headerCategoryNames: HeaderNavInfo = {
     categoryName: 'Basket',
     categoryIcon: 'basket',
     categoryRoutePath: 'basket',
-    nestedSubMenu: [],
+    nestedSubMenu: null,
   },
   lists: {
     categoryName: 'Your lists',
