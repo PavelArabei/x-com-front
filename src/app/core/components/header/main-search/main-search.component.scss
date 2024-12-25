@@ -1,43 +1,32 @@
-@use 'colors';
 @use 'mixins';
 @use 'text-sizes';
+
+/* stylelint-disable */
+:host::ng-deep {
+  .mat-mdc-form-field-bottom-align {
+    display: none;
+  }
+  .mdc-text-field--filled {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
+}
 
 .search {
   width: 100%;
   display: flex;
-  height: 2.5rem;
   border-radius: 0.5rem;
-  background-color: colors.$background-secondary;
-  color: colors.$text;
 
-  &__input {
-    font-size: 1.5rem;
+  &__form {
     flex-grow: 1;
-    background-color: transparent;
-    color: colors.$text;
-    margin: 0 10px;
   }
 
   &__button {
-    display: flex;
-    background-color: colors.$text-contrast;
-    color: colors.$background;
-    padding: 0 1.5rem;
-    border-radius: 0.5rem;
-    align-items: center;
-    transition: 0.3s;
-
-    &:hover {
-      background-color: colors.$text;
-      color: colors.$background-contrast;
-      .search__icon {
-        transform: scale(1.1);
-      }
-    }
+    border-radius: 0 0.5rem 0.5rem 0;
+    min-width: 7rem;
   }
 
   &__icon {
-    @include mixins.icon-size(text-sizes.$l);
+    @include mixins.icon-size(text-sizes.$xl);
     transition: 0.3s;
   }
 }

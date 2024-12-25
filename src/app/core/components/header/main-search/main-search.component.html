@@ -1,6 +1,23 @@
 <div class="search">
-  <input class="search__input" type="text" name="search-input" />
-  <button class="search__button">
+  <mat-form-field color="primary" class="search__form">
+    <mat-label class="search__label">Clearable input</mat-label>
+    <input
+      class="search__input"
+      matInput
+      type="text"
+      name="search-input"
+      [(ngModel)]="searchText" />
+    @if (searchText) {
+      <button
+        matSuffix
+        mat-icon-button
+        aria-label="Clear"
+        (click)="searchText = ''">
+        <mat-icon>close</mat-icon>
+      </button>
+    }
+  </mat-form-field>
+  <button color="secondary" class="search__button" mat-fab>
     <mat-icon class="search__icon" [svgIcon]="'search'"></mat-icon>
   </button>
 </div>
