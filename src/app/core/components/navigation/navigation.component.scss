@@ -1,15 +1,9 @@
-@use 'colors';
-
 .sidenav-container {
   height: 100%;
 }
 
 .sidenav {
-  width: 200px;
-}
-
-.sidenav {
-  background: inherit;
+  width: 500px;
 }
 
 .toolbar {
@@ -18,17 +12,18 @@
   z-index: 1;
   height: auto;
   transition: 0.3s linear;
+  background-color: var(--background-contrast);
 }
 .content {
   min-height: 100dvh;
   display: flex;
   flex-direction: column;
   transition: 0.3s linear;
-  background-color: colors.$background;
+  background-color: var(--background);
 }
 
 .main {
-  margin: 250px auto 0;
+  margin: 150px auto 0;
   align-items: center;
   flex-grow: 1;
 }

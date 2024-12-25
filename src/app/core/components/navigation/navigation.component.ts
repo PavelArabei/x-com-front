@@ -7,7 +7,6 @@ import { MatListModule } from '@angular/material/list';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { RouterOutlet } from '@angular/router';
-import { ButtonComponent } from '@shared/components/button/button.component';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 
@@ -27,14 +26,13 @@ import { HeaderComponent } from '../header/header.component';
     AsyncPipe,
     RouterOutlet,
     HeaderComponent,
-    ButtonComponent,
   ],
 })
 export class NavigationComponent {
   private breakpointObserver = inject(BreakpointObserver);
 
   isHandset$: Observable<boolean> = this.breakpointObserver
-    .observe(Breakpoints.HandsetLandscape)
+    .observe([Breakpoints.Medium, Breakpoints.Small, Breakpoints.XSmall])
     .pipe(
       map((result) => result.matches),
       shareReplay()

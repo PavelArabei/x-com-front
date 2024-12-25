@@ -4,7 +4,7 @@
     class="sidenav"
     fixedInViewport
     [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    mode="over"
     [opened]="false">
     <mat-toolbar>Menu</mat-toolbar>
     <mat-nav-list> to do </mat-nav-list>
