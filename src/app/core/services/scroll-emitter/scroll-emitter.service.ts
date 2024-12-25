@@ -26,7 +26,7 @@ export class ScrollEmitterService {
       fromEvent(window, 'scroll')
         .pipe(
           map(() => getWindowScrollPosition()),
-          debounceTime(20)
+          debounceTime(50)
         )
         .subscribe((scrollPosition) => {
           const previousIsOnTopValue = this._isOnTop$.value;
